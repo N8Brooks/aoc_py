@@ -28,5 +28,6 @@ def b(text):
 
 if __name__ == '__main__':
     text = '3x4x5'
+    
     print(a(text))
     print(b(text))
