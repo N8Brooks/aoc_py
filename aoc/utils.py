@@ -32,6 +32,7 @@ def get_input(year, day):
     
     url = f'https://adventofcode.com/{year}/day/{day}/input'
     text = Session().get(url, cookies=COOKIES).text
+    os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'w') as file:
         file.write(text)
     
