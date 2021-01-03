@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
-""""""
+"""
+https://adventofcode.com/2015/day/3
+"""
 
 
-from unittest import TestCase, main
+from unittest import main, TestCase
 
 
 from aoc.year2015.day3 import a, b

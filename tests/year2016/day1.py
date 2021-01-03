@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
-""""""
+"""
+https://adventofcode.com/2016/day/1
+"""
 
 
 from unittest import TestCase, main
