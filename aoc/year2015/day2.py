@@ -8,6 +8,9 @@ https://adventofcode.com/2015/day/2
 from itertools import starmap
 
 
+from aoc.utils import get_input
+
+
 def process(text):
     return (sorted(map(int, line.split('x'))) for line in text.split())
 
@@ -27,7 +30,7 @@ def b(text):
 
 
 if __name__ == '__main__':
-    text = '3x4x5'
+    text = get_input(2015, 2)
     
     print(a(text))
     print(b(text))

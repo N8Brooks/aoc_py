@@ -8,6 +8,9 @@ https://adventofcode.com/2020/day/1
 from operator import mul
 
 
+from aoc.utils import get_input
+
+
 def a(text, total):
     def add(entry):
         if total - entry in entries:
@@ -39,7 +42,7 @@ def b(text, total):
 
 
 if __name__ == '__main__':
-    text = '524 2345 234 1234 452 1230 1234 500 286 1244 123 1520 123'
+    text = get_input(2020, 1)
     
     print(a(text, 2020))
     print(b(text, 2020))

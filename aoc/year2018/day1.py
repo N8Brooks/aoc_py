@@ -8,6 +8,9 @@ https://adventofcode.com/2018/day/1
 from itertools import accumulate, cycle
 
 
+from aoc.utils import get_input
+
+
 def a(text):
     return sum(map(int, text.split()))
 
@@ -26,7 +29,7 @@ def b(text):
 
 
 if __name__ == '__main__':
-    text = '+1 +2 +3 +5 -8 +20'
+    text = get_input(2018, 1)
     
     print(a(text))
     print(b(text))

@@ -5,6 +5,9 @@ https://adventofcode.com/2017/day/1
 """
 
 
+from aoc.utils import get_input
+
+
 def a(text):
     def match(i):
         return text[i] == text[i - 1]
@@ -20,7 +23,7 @@ def b(text):
 
 
 if __name__ == '__main__':
-    text = '1235138945710892345701892345701892352223899'
+    text = get_input(2017, 1)
     
     print(a(text))
     print(b(text))

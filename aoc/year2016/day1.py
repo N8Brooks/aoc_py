@@ -10,6 +10,9 @@ from operator import mul
 import re
 
 
+from aoc.utils import get_input
+
+
 def process(text, r=re.compile(r'([LR])(\d+)')):
     def turn(direction):
         return 1j if direction == 'L' else -1j
@@ -42,7 +45,7 @@ def b(text):
 
 
 if __name__ == '__main__':
-    text = 'R4, R1, L2, R1, L1, L1, R1, L5, R1, R5, L2, R3, L3, L4, R1, R1, R1'
+    text = get_input(2016, 1)
     
     print(a(text))
     print(b(text))

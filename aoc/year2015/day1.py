@@ -8,6 +8,9 @@ https://adventofcode.com/2015/day/1
 from itertools import accumulate
 
 
+from aoc.utils import get_input
+
+
 def a(text):
     return text.count('(') - text.count(')')
 
@@ -22,7 +25,7 @@ def b(text):
 
 
 if __name__ == '__main__':
-    text = '(((())))()((((((((())()(()))(()((((()(()(((())))))))))))))))))))))'
+    text = get_input(2015, 1)
     
     print(a(text))
     print(b(text))

@@ -8,6 +8,9 @@ https://adventofcode.com/2019/day/1
 from itertools import repeat, takewhile
 
 
+from aoc.utils import get_input
+
+
 def a(text):
     return sum(int(mass) // 3 - 2 for mass in text.split())
 
@@ -21,7 +24,7 @@ def b(text):
 
 
 if __name__ == '__main__':
-    text = '1234534 13451 12341234 345634 1341'
+    text = get_input(2019, 1)
     
     print(a(text))
     print(b(text))

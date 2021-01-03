@@ -8,6 +8,9 @@ https://adventofcode.com/2015/day/3
 from itertools import accumulate, islice
 
 
+from aoc.utils import get_input
+
+
 def direction(char):
     if char == '^':
         return 1j
@@ -32,7 +35,7 @@ def b(text):
 
 
 if __name__ == '__main__':
-    text = '^<<<>vv><><>v^><>^^^^vvvv'
+    text = get_input(2015, 3)
     
     print(a(text))
     print(b(text))
