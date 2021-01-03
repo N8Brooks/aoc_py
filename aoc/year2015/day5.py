@@ -38,10 +38,11 @@ def b(text):
     def nice(string):
         if not split_pair(string, 0) and not split_pair(string, 1):
            return False
+
+        seen.clear()
         
         return any(starmap(twin_pair, pairwise(pairwise(string))))
     
-    nonlocal seen
     seen = set()
 
     return sum(map(nice, text.split()))
