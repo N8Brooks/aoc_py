@@ -39,9 +39,9 @@ def b(text):
     previous = set()
     
     movements = chain.from_iterable(map(repeat, *process(text)))
-    upcoming = accumulate(movements, initial=0)
+    locations = accumulate(movements, initial=0)
     
-    return manhatten(next(filter(visited, upcoming)))
+    return manhatten(next(filter(visited, locations)))
 
 
 if __name__ == '__main__':
