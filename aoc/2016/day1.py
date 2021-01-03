@@ -5,10 +5,9 @@ https://adventofcode.com/2016/day/1
 """
 
 
-from itertools import starmap, repeat
-from more_itertools import last
-import re
+from itertools import repeat
 from operator import mul
+import re
 
 
 def process(text, r=re.compile(r'([LR])(\d+)')):
