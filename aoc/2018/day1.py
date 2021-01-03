@@ -26,7 +26,7 @@ def b(text):
 
 
 if __name__ == '__main__':
-    text = '+1\n+2\n+3\n+5\n-8\n+20\n'
+    text = '+1 +2 +3 +5 -8 +20'
     
     print(a(text))
     print(b(text))
