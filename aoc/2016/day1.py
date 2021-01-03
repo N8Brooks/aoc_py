@@ -31,9 +31,8 @@ def b(text):
     def visited(location):
         if location in previous:
             return True
-        else:
-            previous.add(location)
-            return False
+        previous.add(location)
+        return False
     
     previous = set()
     
