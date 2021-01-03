@@ -5,7 +5,7 @@ https://adventofcode.com/2016/day/1
 """
 
 
-from itertools import repeat
+from itertools import accumulate, chain, repeat
 from operator import mul
 import re
 
