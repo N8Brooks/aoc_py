@@ -20,5 +20,7 @@ def b(text):
 
 
 if __name__ == '__main__':
+    text = '1235138945710892345701892345701892352223899'
+    
     print(a(text))
     print(b(text))
