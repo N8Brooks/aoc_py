@@ -4,34 +4,46 @@ Utility functions
 """
 
 
-import os.path
+from functools import cache
+import os
 from requests import Session
 
 
-_ROOT = os.path.abspath(os.path.dirname(__file__))
+@cache
+def get_root_path():
+    return os.path.abspath(os.path.dirname(__file__))
 
-SESSION_PATH = os.path.join(_ROOT, 'session.txt')
 
-if os.path.isfile(SESSION_PATH):
-    with open(os.path.join(_ROOT, SESSION_PATH), 'r') as file:
-        COOKIES = dict(session=file.read())
-else:
-    COOKIES = None
+@cache
+def get_session_path():
+    return os.path.join(get_root_path(), 'session.txt')
+
+
+def get_cookies():
+    root_path = get_root_path()
+    session_path = get_session_path()
+    
+    if os.path.isfile(session_path):
+        with open(os.path.join(root_path, session_path), 'r') as file:
+            return {'cookies':{'session':file.read()}}
+    
+    return None
 
 
 def get_input(year, day):
-    path = os.path.join(_ROOT, 'input', f'year{year}', f'day{day}.txt')
+    root_path = get_root_path()
+    path = os.path.join(root_path, 'input', f'year{year}', f'day{day}.txt')
     
     if os.path.isfile(path):
         with open(path, 'r') as file:
             return file.read()
     
-    if COOKIES is None:
+    if get_cookies() is None:
         raise FileNotFoundError(('Add session id to aoc/session.txt '
                                  f'or paste the input here: {path}'))
     
     url = f'https://adventofcode.com/{year}/day/{day}/input'
-    text = Session().get(url, cookies=COOKIES).text
+    text = Session().get(url, **get_cookies()).text
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'w') as file:
         file.write(text)
