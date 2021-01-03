@@ -11,12 +11,12 @@ from aoc.utils import get_input
 
 class TestA(TestCase):
     def test_input(self):
-        self.assertEqual(ab(get_input(2016, 1)), 161)
+        self.assertEqual(a(get_input(2016, 1)), 161)
 
 
 class TestB(TestCase):
     def test_input(self):
-        self.assertEqual(ab(get_input(2016, 1)), 110)
+        self.assertEqual(b(get_input(2016, 1)), 110)
 
 
 if __name__ == '__main__':
