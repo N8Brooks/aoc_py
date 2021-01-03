@@ -8,17 +8,25 @@ https://adventofcode.com/2015/day/3
 from itertools import accumulate, islice
 
 
-DIRS = {'^':1j, '>':1, 'v':-1j, '<':-1}
+def direction(char):
+    if char == '^':
+        return 1j
+    elif char == '>':
+        return 1
+    elif char == 'v':
+        return -1j
+    elif char == '<':
+        return -1
 
 
 def a(text):
-    return len(set({0} | set(accumulate(map(DIRS.get, text)))))
+    return len(set({0} | set(accumulate(map(direction, text)))))
 
 
 def b(text):
     locations = {0}
-    locations.update(accumulate(map(DIRS.get, islice(text, 0, None, 2))))
-    locations.update(accumulate(map(DIRS.get, islice(text, 1, None, 2))))
+    locations.update(accumulate(map(direction, islice(text, 0, None, 2))))
+    locations.update(accumulate(map(direction, islice(text, 1, None, 2))))
     
     return len(locations)
 
