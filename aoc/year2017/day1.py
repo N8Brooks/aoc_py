@@ -8,18 +8,27 @@ https://adventofcode.com/2017/day/1
 from aoc.utils import get_input
 
 
-def a(text):
+def process(func):
+    def wrapper(text):
+        return func(tuple(map(int, text.strip())))
+    
+    return wrapper
+
+
+@process
+def a(processed):
     def match(i):
-        return text[i] == text[i - 1]
+        return processed[i] == processed[i - 1]
     
-    return sum(int(text[i]) for i in filter(match, range(len(text))))
+    return sum(processed[i] for i in filter(match, range(len(processed))))
 
 
-def b(text):
-    def match(i, halfway=len(text) // 2):
-        return text[i] == text[i - halfway]
+@process
+def b(processed):
+    def match(i, halfway=len(processed) // 2):
+        return processed[i] == processed[i - halfway]
     
-    return sum(int(text[i]) for i in filter(match, range(len(text))))
+    return sum(processed[i] for i in filter(match, range(len(processed))))
 
 
 if __name__ == '__main__':

@@ -30,7 +30,7 @@ class TestA(TestCase):
 
 class TestB(TestCase):
     def test_input(self):
-        self.assertEqual(b(get_input(2017, 1)), 1029)
+        self.assertEqual(b(get_input(2017, 1)), 1092)
     
     def test_example_1(self):
         self.assertEqual(b('1212'), 6)

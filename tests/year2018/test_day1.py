@@ -16,16 +16,16 @@ class TestA(TestCase):
         self.assertEqual(a(get_input(2018, 1)), 599)
     
     def test_example_1(self):
-        self.assertEqual(a('+1, -2, +3, +1'), 3)
+        self.assertEqual(a('+1 -2 +3 +1'), 3)
     
     def test_example_2(self):
-        self.assertEqual(a('+1, +1, +1'), 3)
+        self.assertEqual(a('+1 +1 +1'), 3)
     
     def test_example_3(self):
-        self.assertEqual(a('+1, +1, -2'), 0)
+        self.assertEqual(a('+1 +1 -2'), 0)
     
     def test_example_4(self):
-        self.assertEqual(a('-1, -2, -3'), -6)
+        self.assertEqual(a('-1 -2 -3'), -6)
 
 
 class TestB(TestCase):
@@ -33,16 +33,16 @@ class TestB(TestCase):
         self.assertEqual(b(get_input(2018, 1)), 81204)
     
     def test_example_1(self):
-        self.assertEqual(b('+1, -1'), 0)
+        self.assertEqual(b('+1 -1'), 0)
     
     def test_example_2(self):
-        self.assertEqual(b('+3, +3, +4, -2, -4'), 10)
+        self.assertEqual(b('+3 +3 +4 -2 -4'), 10)
     
     def test_example_3(self):
-        self.assertEqual(b('-6, +3, +8, +5, -6'), 5)
+        self.assertEqual(b('-6 +3 +8 +5 -6'), 5)
     
     def test_example_4(self):
-        self.assertEqual(b('+7, +7, -2, -7, -4'), 14)
+        self.assertEqual(b('+7 +7 -2 -7 -4'), 14)
 
 
 if __name__ == '__main__':
