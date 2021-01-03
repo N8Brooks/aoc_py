@@ -9,7 +9,7 @@ from itertools import starmap
 
 
 def process(text):
-    return tuple(sorted(map(int, line.split('x'))) for line in text.split())
+    return (sorted(map(int, line.split('x'))) for line in text.split())
 
 
 def a(text):
