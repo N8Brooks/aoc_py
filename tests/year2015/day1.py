@@ -7,11 +7,12 @@ from unittest import TestCase, main
 
 
 from aoc.year2015.day1 import *
+from aoc.utils import get_input
 
 
 class TestA(TestCase):
     def test_input(self):
-        pass
+        self.assertEqual(a(get_input(2015, 1)), 232)
     
     def test_example_1a(self):
         self.assertEqual(a('(())'), 0)
@@ -43,7 +44,7 @@ class TestA(TestCase):
 
 class TestB(TestCase):
     def test_input(self):
-        pass
+        self.assertEqual(b(get_input(2015, 1)), 1783)
     
     def test_example_1(self):
         self.assertEqual(b(')'), 1)
