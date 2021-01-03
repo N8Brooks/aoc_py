@@ -10,8 +10,10 @@ from requests import Session
 
 _ROOT = os.path.abspath(os.path.dirname(__file__))
 
-if os.path.isfile('session.txt'):
-    with open('session.txt', 'r') as file:
+SESSION_PATH = os.path.join(_ROOT, 'session.txt')
+
+if os.path.isfile(SESSION_PATH):
+    with open(os.path.join(_ROOT, SESSION_PATH), 'r') as file:
         COOKIES = dict(session=file.read())
 else:
     COOKIES = None
