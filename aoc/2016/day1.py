@@ -32,7 +32,6 @@ def b(text):
         if location in previous:
             return True
         previous.add(location)
-        return False
     
     previous = set()
     
