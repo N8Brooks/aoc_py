@@ -44,5 +44,7 @@ def b(text):
 
 
 if __name__ == '__main__':
+    text = 'R4, R1, L2, R1, L1, L1, R1, L5, R1, R5, L2, R3, L3, L4, R1, R1, R1'
+    
     print(a(text))
     print(b(text))
