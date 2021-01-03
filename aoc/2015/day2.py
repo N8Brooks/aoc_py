@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-I Was Told There Would Be No Math
+https://adventofcode.com/2015/day/2
 """
 
 
