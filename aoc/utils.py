@@ -25,8 +25,8 @@ def get_input(year, day):
             return file.read()
     
     if COOKIES is None:
-        raise FileNotFoundError(('Add session id to aoc/aoc/session.txt or '
-                                 'paste input into the appropriate location'))
+        raise FileNotFoundError(('Add session id to aoc/session.txt '
+                                 f'or paste the input here: {path}'))
     
     url = f'https://adventofcode.com/{year}/day/{day}/input'
     text = Session().get(url, cookies=COOKIES).text
