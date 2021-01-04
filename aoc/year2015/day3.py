@@ -7,18 +7,17 @@ https://adventofcode.com/2015/day/3
 
 from itertools import accumulate, islice
 
-
 from aoc.utils import get_input
 
 
 def direction(char):
-    if char == '^':
+    if char == "^":
         return 1j
-    elif char == '>':
+    elif char == ">":
         return 1
-    elif char == 'v':
+    elif char == "v":
         return -1j
-    elif char == '<':
+    elif char == "<":
         return -1
 
 
@@ -30,12 +29,12 @@ def b(text):
     locations = {0}
     locations.update(accumulate(map(direction, islice(text, 0, None, 2))))
     locations.update(accumulate(map(direction, islice(text, 1, None, 2))))
-    
+
     return len(locations)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     text = get_input(2015, 3)
-    
+
     print(a(text))
     print(b(text))

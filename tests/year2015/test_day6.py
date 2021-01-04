@@ -6,7 +6,6 @@ https://adventofcode.com/2015/day/6
 
 from unittest import TestCase, main
 
-
 from aoc.year2015.day6 import a, b
 from aoc.utils import get_input
 
