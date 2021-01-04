@@ -11,7 +11,7 @@ from aoc.utils import get_input
 def process(func):
     def wrapper(text):
         return func(tuple(map(int, text.strip())))
-    
+
     return wrapper
 
 
@@ -19,7 +19,7 @@ def process(func):
 def a(processed):
     def match(i):
         return processed[i] == processed[i - 1]
-    
+
     return sum(processed[i] for i in filter(match, range(len(processed))))
 
 
@@ -27,12 +27,12 @@ def a(processed):
 def b(processed):
     def match(i, halfway=len(processed) // 2):
         return processed[i] == processed[i - halfway]
-    
+
     return sum(processed[i] for i in filter(match, range(len(processed))))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     text = get_input(2017, 1)
-    
+
     print(a(text))
     print(b(text))

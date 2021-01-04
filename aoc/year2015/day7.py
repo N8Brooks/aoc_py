@@ -18,12 +18,12 @@ COMP = (1 << 16) - 1
 def process(text):
     def cast(operand):
         return operand if operand.isalpha() else int(operand)
-    
+
     def wrap(line):
-        operands, dest = line.split(' -> ')
+        operands, dest = line.split(" -> ")
         return tuple(map(cast, operands.split())), dest
-    
-    return map(wrap, text.strip().split('\n'))
+
+    return map(wrap, text.strip().split("\n"))
 
 
 def compute(q, request):
@@ -32,7 +32,7 @@ def compute(q, request):
             return _reg.get(operand, None)
         else:
             return int(operand)
-    
+
     def move(exp, dest):
         if (res := val(exp[0])) is None:
             q.append((exp, dest))
@@ -44,20 +44,20 @@ def compute(q, request):
             q.append((exp, dest))
         else:
             _reg[dest] = COMP ^ res
-        
+
     def instruct(exp, dest):
         if (res1 := val(exp[0])) is None or (res2 := val(exp[2])) is None:
             q.append((exp, dest))
             return
-        if exp[1] == 'AND':
+        if exp[1] == "AND":
             _reg[dest] = res1 & res2
-        elif exp[1] == 'OR':
+        elif exp[1] == "OR":
             _reg[dest] = res1 | res2
-        elif exp[1] == 'LSHIFT':
+        elif exp[1] == "LSHIFT":
             _reg[dest] = res1 << res2
-        elif exp[1] == 'RSHIFT':
+        elif exp[1] == "RSHIFT":
             _reg[dest] = res1 >> res2
-    
+
     def operate(exp, dest):
         if len(exp) == 1:
             move(exp, dest)
@@ -65,22 +65,22 @@ def compute(q, request):
             complement(exp, dest)
         else:
             instruct(exp, dest)
-    
+
     _reg = {}
-    
+
     while q:
         operate(*q.popleft())
 
     return _reg.get(request, None)
 
 
-def a(text, request='a'):
+def a(text, request="a"):
     return compute(deque(process(text)), request)
 
 
-def b(text, request='a'):
-    q = deque(filter(lambda line: line[1] != 'b', process(text)))
-    q.appendleft(((a(text, request),), 'b'))
+def b(text, request="a"):
+    q = deque(filter(lambda line: line[1] != "b", process(text)))
+    q.appendleft(((a(text, request),), "b"))
 
     return compute(q, request)
 

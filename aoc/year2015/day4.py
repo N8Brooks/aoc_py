@@ -17,14 +17,14 @@ def ab(text, start):
         hasher.update(str(suffix).encode())
         hexadecimal = hasher.hexdigest()
         return hexadecimal.startswith(start)
-    
+
     prefix = md5(text.strip().encode())
-    
+
     return next(filter(valid, count()))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     text = get_input(2015, 4)
-    
-    print(ab(text, '00000'))
-    print(ab(text, '000000'))
+
+    print(ab(text, "00000"))
+    print(ab(text, "000000"))

@@ -19,12 +19,12 @@ def b(text):
     def fuel(mass):
         fuels = (mass := mass // 3 - 2 for _ in repeat(None))
         return sum(takewhile(lambda mass: 0 < mass, fuels))
-    
+
     return sum(map(fuel, map(int, text.split())))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     text = get_input(2019, 1)
-    
+
     print(a(text))
     print(b(text))

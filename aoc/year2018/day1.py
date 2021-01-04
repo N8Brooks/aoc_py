@@ -20,16 +20,16 @@ def b(text):
         if frequency in previous:
             return True
         previous.add(frequency)
-    
+
     previous = set()
-    
+
     frequencies = accumulate(cycle(map(int, text.split())), initial=0)
-    
+
     return next(filter(visited, frequencies))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     text = get_input(2018, 1)
-    
+
     print(a(text))
     print(b(text))
