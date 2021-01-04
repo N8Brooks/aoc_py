@@ -40,7 +40,7 @@ def get_input(year, day):
 
     if get_cookies() is None:
         raise FileNotFoundError(
-            ("Add session id to aoc/session.txt " f"or paste the input here: {path}")
+            f"Add session id to aoc/session.txt or paste the input here: {path}"
         )
 
     url = f"https://adventofcode.com/{year}/day/{day}/input"
