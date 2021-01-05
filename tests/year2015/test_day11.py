@@ -17,11 +17,13 @@ class TestA(TestCase):
     def test_example_1(self):
         self.assertEqual(a("abcdefgh"), "abcdffaa")
 
+    @skip("Takes too long")
     def test_example_2(self):
         self.assertEqual(a("ghijklmn"), "ghjaabcc")
 
 
 class TestB(TestCase):
+    @skip("Takes too long")
     def test_input(self):
         self.assertEqual(b(get_input(2015, 11)), "hxcaabcc")
 
