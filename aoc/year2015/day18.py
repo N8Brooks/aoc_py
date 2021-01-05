@@ -14,22 +14,22 @@ from more_itertools import ilen
 from aoc.utils import get_input
 
 
-def a(text, target=150):
+def a(raw, target=150):
     def update(freq, b):
         freq += {a + b: count for a, count in freq.items() if a + b <= target}
         return freq
 
-    return reduce(update, map(int, text.split()), Counter((0,))).get(target, 0)
+    return reduce(update, map(int, raw.split()), Counter((0,))).get(target, 0)
 
 
-def b(text, target=150):
+def b(raw, target=150):
     def target_sum(combo):
         return sum(combo) == target
 
     def valid_combo(k):
         return ilen(filter(target_sum, combinations(nums, k)))
 
-    nums = tuple(map(int, text.split()))
+    nums = tuple(map(int, raw.split()))
 
     return next(filter(bool, map(valid_combo, range(len(nums)))))
 

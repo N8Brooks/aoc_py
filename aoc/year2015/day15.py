@@ -20,8 +20,8 @@ R = re.compile(
 )
 
 
-def process(raw):
-    processed = [R.match(line).groups() for line in raw.strip().split("\n")]
+def process(text):
+    processed = [R.match(line).groups() for line in text.strip().split("\n")]
 
     return np.array(processed, int).transpose()
 
@@ -42,17 +42,17 @@ def score(allocations, matrix):
     return np.clip(totals, 0, None).prod()
 
 
-def a(raw):
-    matrix = process(raw)[:-1]
+def a(text):
+    matrix = process(text)[:-1]
 
     return max(map(score, allocation(matrix.shape[1]), repeat(matrix)))
 
 
-def b(raw, target=500):
+def b(text, target=500):
     def valid(allocations):
         return (calories * allocations).sum() == target
 
-    *matrix, calories = process(raw)
+    *matrix, calories = process(text)
     matrix = np.vstack(matrix)
 
     filtered = filter(valid, allocation(matrix.shape[1]))

@@ -24,13 +24,13 @@ TARGET = {
 }
 
 
-def find_sue(raw, validProp):
+def find_sue(text, validProp):
     def valid_sue(line):
         return all(map(validProp, r.sub("", line).split(", ")))
 
     r = re.compile(r"Sue (\d+): ")
 
-    sue = next(filter(valid_sue, raw.strip().split("\n")))
+    sue = next(filter(valid_sue, text.strip().split("\n")))
 
     return int(r.match(sue).groups()[0])
 
