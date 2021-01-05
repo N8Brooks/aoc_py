@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-https://adventofcode.com/2015/day/16
+https://adventofcode.com/2015/day/20
 """
 
 
