@@ -14,6 +14,9 @@ from more_itertools import consume, pairwise
 from aoc.utils import get_input
 
 
+# TODO: replace double dict data structure with matrix
+
+
 def process(text):
     def distance(path):
         return sum(dist[a][b] for a, b in pairwise(path))
