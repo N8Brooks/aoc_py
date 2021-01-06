@@ -11,9 +11,11 @@ from data.utils import get_input
 
 
 class TestPart1(TestCase):
+    @skip("Takes too long")
     def test_input(self):
         self.assertEqual(part1(get_input(2016, 5)), "c6697b55")
 
+    @skip("Takes too long")
     def test_example(self):
         self.assertEqual(part1("abc"), "18f47a30")
 
@@ -25,9 +27,11 @@ class TestPart1(TestCase):
 
 
 class TestPart2(TestCase):
+    @skip("Takes too long")
     def test_input(self):
         self.assertEqual(part2(get_input(2016, 5)), "8c35d1ab")
 
+    @skip("Takes too long")
     def test_example(self):
         self.assertEqual(part2("abc"), "05ace8e3")
 

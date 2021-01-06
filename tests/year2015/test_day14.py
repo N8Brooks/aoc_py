@@ -4,7 +4,7 @@ https://adventofcode.com/2015/day/14
 """
 
 
-from unittest import main, skip, TestCase
+from unittest import main, TestCase
 
 from aoc.year2015.day14 import part1, part2
 from data.utils import get_input

@@ -11,19 +11,45 @@ from data.utils import get_input
 
 
 class TestPart1(TestCase):
+    @skip("Takes too long")
     def test_input(self):
         self.assertEqual(part1(get_input(2015, 11)), "hxbxxyzz")
 
+    @skip("Takes too long")
     def test_example_1(self):
         self.assertEqual(part1("abcdefgh"), "abcdffaa")
 
+    @skip("Takes too long")
     def test_example_2(self):
         self.assertEqual(part1("ghijklmn"), "ghjaabcc")
 
+    def test_mock_1(self):
+        self.assertEqual(part1("bbccc"), "bbcdd")
+
+    def test_mock_2(self):
+        self.assertEqual(part1("xxydf"), "xxyzz")
+
 
 class TestPart2(TestCase):
+    @skip("Takes too long")
     def test_input(self):
         self.assertEqual(part2(get_input(2015, 11)), "hxcaabcc")
+
+    @skip("Takes too long")
+    def test_example_1(self):
+        self.assertEqual(part2("abcdefgh"), "abcdffbb")
+
+    @skip("Takes too long")
+    def test_example_2(self):
+        self.assertEqual(part2("ghijklmn"), "ghjbbcdd")
+
+    @skip("Takes too long")
+    def test_mock_1(self):
+        self.assertEqual(part2("aabcb"), "bbcdd")
+
+    @skip("Takes too long")
+    def test_mock_2(self):
+        self.assertEqual(part2("ddefe"), "eefgg")
 
 
 if __name__ == "__main__":

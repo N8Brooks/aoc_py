@@ -11,6 +11,7 @@ from data.utils import get_input
 
 
 class TestPart1(TestCase):
+    @skip("Takes too long")
     def test_input(self):
         self.assertEqual(part1(get_input(2015, 20)), 776160)
 
@@ -20,16 +21,29 @@ class TestPart1(TestCase):
     def test_example_2(self):
         self.assertEqual(part1(70), 4)
 
+    def test_example_3(self):
+        self.assertEqual(part1(111), 6)
+
+    def test_example_4(self):
+        self.assertEqual(part1(169), 10)
+
 
 class TestPart2(TestCase):
+    @skip("Takes too long")
     def test_input(self):
         self.assertEqual(part2(get_input(2015, 20)), 786240)
 
     def test_example_1(self):
-        self.assertEqual(part2(10), 1)
+        self.assertEqual(part2(8), 1)
 
     def test_example_2(self):
-        self.assertEqual(part2(70), 4)
+        self.assertEqual(part2(64), 4)
+
+    def test_example_3(self):
+        self.assertEqual(part2(133), 8)
+
+    def test_example_4(self):
+        self.assertEqual(part2(820), 36)
 
 
 if __name__ == "__main__":
