@@ -23,16 +23,16 @@ def process(text):
     return (map(int, tri.split()) for tri in text.strip().split("\n"))
 
 
-def a(text):
+def part1(text):
     return total(process(text))
 
 
-def b(text):
+def part2(text):
     return total(ichunked(chain.from_iterable(zip(*process(text))), 3))
 
 
 if __name__ == "__main__":
     text = get_input(2016, 3)
 
-    print(a(text))
-    print(b(text))
+    print(part1(text))
+    print(part2(text))

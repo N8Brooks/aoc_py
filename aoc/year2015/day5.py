@@ -13,7 +13,7 @@ from more_itertools import pairwise
 from aoc.utils import get_input
 
 
-def a(text):
+def part1(text):
     def nice(string):
         if any(two in string for two in ("ab", "cd", "pq", "xy")):
             return False
@@ -26,7 +26,7 @@ def a(text):
     return sum(map(nice, text.split()))
 
 
-def b(text):
+def part2(text):
     def split_pair(string, start):
         return any(starmap(eq, pairwise(islice(string, start, None, 2))))
 
@@ -51,5 +51,5 @@ def b(text):
 if __name__ == "__main__":
     text = get_input(2015, 5)
 
-    print(a(text))
-    print(b(text))
+    print(part1(text))
+    print(part2(text))

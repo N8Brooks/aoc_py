@@ -6,39 +6,39 @@ https://adventofcode.com/2019/day/1
 
 from unittest import main, TestCase
 
-from aoc.year2019.day1 import a, b
+from aoc.year2019.day1 import part1, part2
 from aoc.utils import get_input
 
 
-class TestA(TestCase):
+class TestPart1(TestCase):
     def test_input(self):
-        self.assertEqual(a(get_input(2019, 1)), 3408471)
+        self.assertEqual(part1(get_input(2019, 1)), 3408471)
 
     def test_example_1(self):
-        self.assertEqual(a("12"), 2)
+        self.assertEqual(part1("12"), 2)
 
     def test_example_2(self):
-        self.assertEqual(a("14"), 2)
+        self.assertEqual(part1("14"), 2)
 
     def test_example_3(self):
-        self.assertEqual(a("1969"), 654)
+        self.assertEqual(part1("1969"), 654)
 
     def test_example_4(self):
-        self.assertEqual(a("100756"), 33583)
+        self.assertEqual(part1("100756"), 33583)
 
 
-class TestB(TestCase):
+class TestPart2(TestCase):
     def test_input(self):
-        self.assertEqual(b(get_input(2019, 1)), 5109803)
+        self.assertEqual(part2(get_input(2019, 1)), 5109803)
 
     def test_example_1(self):
-        self.assertEqual(b("14"), 2)
+        self.assertEqual(part2("14"), 2)
 
     def test_example_2(self):
-        self.assertEqual(b("1969"), 966)
+        self.assertEqual(part2("1969"), 966)
 
     def test_example_3(self):
-        self.assertEqual(b("100756"), 50346)
+        self.assertEqual(part2("100756"), 50346)
 
 
 if __name__ == "__main__":

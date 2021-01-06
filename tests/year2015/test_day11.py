@@ -1,31 +1,29 @@
 # -*- coding: utf-8 -*-
 """
-https://adventofcode.com/2015/day/10
+https://adventofcode.com/2015/day/11
 """
 
 
 from unittest import main, skip, TestCase
 
-from aoc.year2015.day11 import a, b
+from aoc.year2015.day11 import part1, part2
 from aoc.utils import get_input
 
 
-class TestA(TestCase):
+class TestPart1(TestCase):
     def test_input(self):
-        self.assertEqual(a(get_input(2015, 11)), "hxbxxyzz")
+        self.assertEqual(part1(get_input(2015, 11)), "hxbxxyzz")
 
     def test_example_1(self):
-        self.assertEqual(a("abcdefgh"), "abcdffaa")
+        self.assertEqual(part1("abcdefgh"), "abcdffaa")
 
-    @skip("Takes too long")
     def test_example_2(self):
-        self.assertEqual(a("ghijklmn"), "ghjaabcc")
+        self.assertEqual(part1("ghijklmn"), "ghjaabcc")
 
 
-class TestB(TestCase):
-    @skip("Takes too long")
+class TestPart2(TestCase):
     def test_input(self):
-        self.assertEqual(b(get_input(2015, 11)), "hxcaabcc")
+        self.assertEqual(part2(get_input(2015, 11)), "hxcaabcc")
 
 
 if __name__ == "__main__":

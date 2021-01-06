@@ -56,16 +56,16 @@ def simulate(text, keys, start):
     return "".join(map(keys.get, keycode))
 
 
-def a(text, initial=0 + 0j):
+def part1(text, initial=0 + 0j):
     return simulate(text, KEYPAD_A, initial)
 
 
-def b(text, initial=-2 + 0j):
+def part2(text, initial=-2 + 0j):
     return simulate(text, KEYPAD_B, initial)
 
 
 if __name__ == "__main__":
     text = get_input(2016, 2)
 
-    print(a(text))
-    print(b(text))
+    print(part1(text))
+    print(part2(text))

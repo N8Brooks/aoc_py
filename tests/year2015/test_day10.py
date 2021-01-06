@@ -6,7 +6,7 @@ https://adventofcode.com/2015/day/10
 
 from unittest import main, skip, TestCase
 
-from aoc.year2015.day10 import ab, look_say
+from aoc.year2015.day10 import look_say, part1, part2
 from aoc.utils import get_input
 
 
@@ -27,23 +27,26 @@ class TestLookSay(TestCase):
         self.assertEqual(look_say("111221"), "312211")
 
 
-class TestAB(TestCase):
+class TestPart1(TestCase):
+    def test_input(self):
+        self.assertEqual(part1(get_input(2015, 10)), 252594)
+
     def test_mock_1(self):
-        self.assertEqual(ab("1234", 10), 112)
+        self.assertEqual(part1("1234", 10), 112)
 
     def test_mock_2(self):
-        self.assertEqual(ab("121", 20), 750)
+        self.assertEqual(part1("121", 20), 750)
 
-    def test_mock_3(self):
-        self.assertEqual(ab("1", 30), 5808)
 
-    @skip("Takes too long")
-    def test_input_a(self):
-        self.assertEqual(ab(get_input(2015, 10), 40), 252594)
+class TestPart2(TestCase):
+    def test_input(self):
+        self.assertEqual(part2(get_input(2015, 10)), 3579328)
 
-    @skip("Takes too long")
-    def test_input_b(self):
-        self.assertEqual(ab(get_input(2015, 10), 50), 3579328)
+    def test_mock_1(self):
+        self.assertEqual(part2("1", 5), 6)
+
+    def test_mock_2(self):
+        self.assertEqual(part2("1", 25), 1540)
 
 
 if __name__ == "__main__":

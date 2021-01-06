@@ -16,7 +16,7 @@ def process(func):
 
 
 @process
-def a(processed):
+def part1(processed):
     def match(i):
         return processed[i] == processed[i - 1]
 
@@ -24,7 +24,7 @@ def a(processed):
 
 
 @process
-def b(processed):
+def part2(processed):
     def match(i, halfway=len(processed) // 2):
         return processed[i] == processed[i - halfway]
 
@@ -34,5 +34,5 @@ def b(processed):
 if __name__ == "__main__":
     text = get_input(2017, 1)
 
-    print(a(text))
-    print(b(text))
+    print(part1(text))
+    print(part2(text))

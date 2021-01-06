@@ -34,16 +34,16 @@ def process(text):
     return map(distance, permutations(dist))
 
 
-def a(text):
+def part1(text):
     return min(process(text))
 
 
-def b(text):
+def part2(text):
     return max(process(text))
 
 
 if __name__ == "__main__":
     text = get_input(2015, 9)
 
-    print(a(text))
-    print(b(text))
+    print(part1(text))
+    print(part2(text))

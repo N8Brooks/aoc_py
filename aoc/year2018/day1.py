@@ -11,11 +11,11 @@ from itertools import accumulate, cycle
 from aoc.utils import get_input
 
 
-def a(text):
+def part1(text):
     return sum(map(int, text.split()))
 
 
-def b(text):
+def part2(text):
     def visited(frequency):
         if frequency in previous:
             return True
@@ -31,5 +31,5 @@ def b(text):
 if __name__ == "__main__":
     text = get_input(2018, 1)
 
-    print(a(text))
-    print(b(text))
+    print(part1(text))
+    print(part2(text))

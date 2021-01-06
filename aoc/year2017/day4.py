@@ -10,7 +10,7 @@ from itertools import combinations
 from aoc.utils import get_input
 
 
-def a(text):
+def part1(text):
     def valid(passphrase):
         words = passphrase.split()
         return len(set(words)) == len(words)
@@ -18,7 +18,7 @@ def a(text):
     return sum(map(valid, text.strip().split("\n")))
 
 
-def b(text):
+def part2(text):
     def valid(passphrase):
         words = passphrase.split()
         return len(set(map(tuple, map(sorted, words)))) == len(words)
@@ -29,5 +29,5 @@ def b(text):
 if __name__ == "__main__":
     text = get_input(2017, 4)
 
-    print(a(text))
-    print(b(text))
+    print(part1(text))
+    print(part2(text))

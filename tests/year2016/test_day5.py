@@ -6,40 +6,36 @@ https://adventofcode.com/2016/day/5
 
 from unittest import main, skip, TestCase
 
-from aoc.year2016.day5 import a, b
+from aoc.year2016.day5 import part1, part2
 from aoc.utils import get_input
 
 
-class TestA(TestCase):
-    @skip("Takes too long")
+class TestPart1(TestCase):
     def test_input(self):
-        self.assertEqual(a(get_input(2016, 5)), "c6697b55")
+        self.assertEqual(part1(get_input(2016, 5)), "c6697b55")
 
-    @skip("Takes too long")
     def test_example(self):
-        self.assertEqual(a("abc"), "18f47a30")
+        self.assertEqual(part1("abc"), "18f47a30")
 
     def test_mock_1(self):
-        self.assertEqual(a("abc", 4, "0"), "890c")
+        self.assertEqual(part1("abc", 4, "0"), "890c")
 
     def test_mock_2(self):
-        self.assertEqual(a("xyz", 2, "00"), "ee")
+        self.assertEqual(part1("xyz", 2, "00"), "ee")
 
 
-class TestB(TestCase):
-    @skip("Takes too long")
+class TestPart2(TestCase):
     def test_input(self):
-        self.assertEqual(b(get_input(2016, 5)), "8c35d1ab")
+        self.assertEqual(part2(get_input(2016, 5)), "8c35d1ab")
 
-    @skip("Takes too long")
     def test_example(self):
-        self.assertEqual(b("abc"), "05ace8e3")
+        self.assertEqual(part2("abc"), "05ace8e3")
 
     def test_mock_1(self):
-        self.assertEqual(b("abc", 4, "0"), "3010")
+        self.assertEqual(part2("abc", 4, "0"), "3010")
 
     def test_mock_2(self):
-        self.assertEqual(b("xyz", 2, "00"), "cd")
+        self.assertEqual(part2("xyz", 2, "00"), "cd")
 
 
 if __name__ == "__main__":

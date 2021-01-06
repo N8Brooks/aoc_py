@@ -35,7 +35,7 @@ def find_sue(text, validProp):
     return int(r.match(sue).groups()[0])
 
 
-def a(text):
+def part1(text):
     def valid_prop(record):
         key, value = record.split(": ")
         return TARGET[key] == value
@@ -43,7 +43,7 @@ def a(text):
     return find_sue(text, valid_prop)
 
 
-def b(text):
+def part2(text):
     def valid_prop(record):
         key, value = record.split(": ")
         if key in ["cats", "trees"]:
@@ -59,5 +59,5 @@ def b(text):
 if __name__ == "__main__":
     text = get_input(2015, 16)
 
-    print(a(text))
-    print(b(text))
+    print(part1(text))
+    print(part2(text))

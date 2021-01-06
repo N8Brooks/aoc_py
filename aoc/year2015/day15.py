@@ -42,13 +42,13 @@ def score(allocations, matrix):
     return np.clip(totals, 0, None).prod()
 
 
-def a(text):
+def part1(text):
     matrix = process(text)[:-1]
 
     return max(map(score, allocation(matrix.shape[1]), repeat(matrix)))
 
 
-def b(text, target=500):
+def part2(text, target=500):
     def valid(allocations):
         return (calories * allocations).sum() == target
 
@@ -63,5 +63,5 @@ def b(text, target=500):
 if __name__ == "__main__":
     text = get_input(2015, 15)
 
-    print(a(text))
-    print(b(text))
+    print(part1(text))
+    print(part2(text))

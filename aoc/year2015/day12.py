@@ -10,7 +10,7 @@ from json import loads
 from aoc.utils import get_input
 
 
-def a(text):
+def part1(text):
     def parse(node):
         if isinstance(node, int):
             return node
@@ -24,7 +24,7 @@ def a(text):
     return parse(loads(text))
 
 
-def b(text):
+def part2(text):
     def parse(node):
         if isinstance(node, int):
             return node
@@ -44,5 +44,5 @@ def b(text):
 if __name__ == "__main__":
     text = get_input(2015, 12)
 
-    print(a(text))
-    print(b(text))
+    print(part1(text))
+    print(part2(text))

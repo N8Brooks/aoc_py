@@ -6,42 +6,42 @@ https://adventofcode.com/2018/day/1
 
 from unittest import main, TestCase
 
-from aoc.year2018.day1 import a, b
+from aoc.year2018.day1 import part1, part2
 from aoc.utils import get_input
 
 
-class TestA(TestCase):
+class TestPart1(TestCase):
     def test_input(self):
-        self.assertEqual(a(get_input(2018, 1)), 599)
+        self.assertEqual(part1(get_input(2018, 1)), 599)
 
     def test_example_1(self):
-        self.assertEqual(a("+1 -2 +3 +1"), 3)
+        self.assertEqual(part1("+1 -2 +3 +1"), 3)
 
     def test_example_2(self):
-        self.assertEqual(a("+1 +1 +1"), 3)
+        self.assertEqual(part1("+1 +1 +1"), 3)
 
     def test_example_3(self):
-        self.assertEqual(a("+1 +1 -2"), 0)
+        self.assertEqual(part1("+1 +1 -2"), 0)
 
     def test_example_4(self):
-        self.assertEqual(a("-1 -2 -3"), -6)
+        self.assertEqual(part1("-1 -2 -3"), -6)
 
 
-class TestB(TestCase):
+class TestPart2(TestCase):
     def test_input(self):
-        self.assertEqual(b(get_input(2018, 1)), 81204)
+        self.assertEqual(part2(get_input(2018, 1)), 81204)
 
     def test_example_1(self):
-        self.assertEqual(b("+1 -1"), 0)
+        self.assertEqual(part2("+1 -1"), 0)
 
     def test_example_2(self):
-        self.assertEqual(b("+3 +3 +4 -2 -4"), 10)
+        self.assertEqual(part2("+3 +3 +4 -2 -4"), 10)
 
     def test_example_3(self):
-        self.assertEqual(b("-6 +3 +8 +5 -6"), 5)
+        self.assertEqual(part2("-6 +3 +8 +5 -6"), 5)
 
     def test_example_4(self):
-        self.assertEqual(b("+7 +7 -2 -7 -4"), 14)
+        self.assertEqual(part2("+7 +7 -2 -7 -4"), 14)
 
 
 if __name__ == "__main__":

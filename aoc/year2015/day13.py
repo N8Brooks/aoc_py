@@ -43,11 +43,11 @@ class Family:
         yield from map(self.happiness, permutations(self.individuals))
 
 
-def a(text):
+def part1(text):
     return max(Family(text))
 
 
-def b(text):
+def part2(text):
     family = Family(text)
     family.individuals.add("Santa's helper")
     return max(family)
@@ -56,5 +56,5 @@ def b(text):
 if __name__ == "__main__":
     text = get_input(2015, 13)
 
-    print(a(text))
-    print(b(text))
+    print(part1(text))
+    print(part2(text))

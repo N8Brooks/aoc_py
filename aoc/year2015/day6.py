@@ -23,7 +23,7 @@ def process(text, instruction, grid):
     return int(grid.sum())
 
 
-def a(text, size):
+def part1(text, size=1000):
     def instruction(action, *coordinates):
         x1, y1, x2, y2 = map(int, coordinates)
         x2, y2 = (x2 + 1, y2 + 1)
@@ -38,7 +38,7 @@ def a(text, size):
     return process(text, instruction, grid)
 
 
-def b(text, size):
+def part2(text, size=1000):
     def instruction(action, *coordinates):
         x1, y1, x2, y2 = map(int, coordinates)
         x2, y2 = (x2 + 1, y2 + 1)
@@ -59,5 +59,5 @@ def b(text, size):
 if __name__ == "__main__":
     text = get_input(2015, 6)
 
-    print(a(text, 1000))
-    print(b(text, 1000))
+    print(part1(text))
+    print(part2(text))

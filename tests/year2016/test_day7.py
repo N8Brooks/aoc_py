@@ -25,7 +25,7 @@ zazbz[bzb]cdb
 """
 
 
-class TestA(TestCase):
+class TestPart1(TestCase):
     def test_input(self):
         self.assertEqual(part1(get_input(2016, 7)), 115)
 
@@ -36,7 +36,7 @@ class TestA(TestCase):
         self.assertEqual(part1(EXAMPLE_2), 0)
 
 
-class TestB(TestCase):
+class TestPart2(TestCase):
     def test_input(self):
         self.assertEqual(part2(get_input(2016, 7)), 231)
 

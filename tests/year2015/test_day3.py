@@ -6,36 +6,36 @@ https://adventofcode.com/2015/day/3
 
 from unittest import main, TestCase
 
-from aoc.year2015.day3 import a, b
+from aoc.year2015.day3 import part1, part2
 from aoc.utils import get_input
 
 
-class TestA(TestCase):
+class TestPart1(TestCase):
     def test_input(self):
-        self.assertEqual(a(get_input(2015, 3)), 2081)
+        self.assertEqual(part1(get_input(2015, 3)), 2081)
 
     def test_example_1(self):
-        self.assertEqual(a(">"), 2)
+        self.assertEqual(part1(">"), 2)
 
     def test_example_2(self):
-        self.assertEqual(a("^>v<"), 4)
+        self.assertEqual(part1("^>v<"), 4)
 
     def test_example_3(self):
-        self.assertEqual(a("^v^v^v^v^v"), 2)
+        self.assertEqual(part1("^v^v^v^v^v"), 2)
 
 
-class TestB(TestCase):
+class TestPart2(TestCase):
     def test_input(self):
-        self.assertEqual(b(get_input(2015, 3)), 2341)
+        self.assertEqual(part2(get_input(2015, 3)), 2341)
 
     def test_example_1(self):
-        self.assertEqual(b("^v"), 3)
+        self.assertEqual(part2("^v"), 3)
 
     def test_example_2(self):
-        self.assertEqual(b("^>v<"), 3)
+        self.assertEqual(part2("^>v<"), 3)
 
     def test_example_3(self):
-        self.assertEqual(b("^v^v^v^v^v"), 11)
+        self.assertEqual(part2("^v^v^v^v^v"), 11)
 
 
 if __name__ == "__main__":

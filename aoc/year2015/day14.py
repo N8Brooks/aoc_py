@@ -26,7 +26,7 @@ def process(text):
     return tuple(map(stats, text.strip().split("\n")))
 
 
-def a(text, total=2503):
+def part1(text, total=2503):
     def distance(speed, flying, resting):
         cycles, extra = divmod(total, flying + resting)
         result = speed * (flying * cycles + min(flying, extra))
@@ -35,7 +35,7 @@ def a(text, total=2503):
     return max(starmap(distance, process(text)))
 
 
-def b(text, total=2503):
+def part2(text, total=2503):
     def distances(speed, flying, resting):
         iterable = chain(repeat(speed, flying), repeat(0, resting))
         yield from accumulate(cycle(iterable))
@@ -52,5 +52,5 @@ def b(text, total=2503):
 if __name__ == "__main__":
     text = get_input(2015, 14)
 
-    print(a(text))
-    print(b(text))
+    print(part1(text))
+    print(part2(text))

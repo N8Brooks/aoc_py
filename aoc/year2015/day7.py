@@ -74,13 +74,13 @@ def compute(q, request):
     return _reg.get(request, None)
 
 
-def a(text, request="a"):
+def part1(text, request="a"):
     return compute(deque(process(text)), request)
 
 
-def b(text, request="a"):
+def part2(text, request="a"):
     q = deque(filter(lambda line: line[1] != "b", process(text)))
-    q.appendleft(((a(text, request),), "b"))
+    q.appendleft(((part1(text, request),), "b"))
 
     return compute(q, request)
 
@@ -88,5 +88,5 @@ def b(text, request="a"):
 if __name__ == "__main__":
     text = get_input(2015, 7)
 
-    print(a(text))
-    print(b(text))
+    print(part1(text))
+    print(part2(text))

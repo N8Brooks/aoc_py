@@ -33,7 +33,7 @@ def step():
     pass
 
 
-def a(text):
+def part1(text):
     # This could probably be improved by using f'{prefix}{replacement}{suffix}'
     replacements, molecule = process(text)
     tokens = tokenize(molecule)
@@ -49,12 +49,12 @@ def a(text):
     return len(unique)
 
 
-def b(text, starting="e"):
+def part2(text, starting="e"):
     pass
 
 
 if __name__ == "__main__":
     text = get_input(2015, 19)
 
-    print(a(text))
-    print(b(text))
+    print(part1(text))
+    print(part2(text))

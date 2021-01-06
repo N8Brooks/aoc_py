@@ -65,16 +65,16 @@ def simulate(text, worst, p_health):
     return next(filter_type(battle, equipment))[0]
 
 
-def a(text, p_health=100):
+def part1(text, p_health=100):
     return simulate(text, False, p_health)
 
 
-def b(text, p_health=100):
+def part2(text, p_health=100):
     return simulate(text, True, p_health)
 
 
 if __name__ == "__main__":
     text = get_input(2015, 21)
 
-    print(a(text))
-    print(b(text))
+    print(part1(text))
+    print(part2(text))

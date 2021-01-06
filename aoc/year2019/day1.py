@@ -11,11 +11,11 @@ from itertools import repeat, takewhile
 from aoc.utils import get_input
 
 
-def a(text):
+def part1(text):
     return sum(int(mass) // 3 - 2 for mass in text.split())
 
 
-def b(text):
+def part2(text):
     def fuel(mass):
         fuels = (mass := mass // 3 - 2 for _ in repeat(None))
         return sum(takewhile(lambda mass: 0 < mass, fuels))
@@ -26,5 +26,5 @@ def b(text):
 if __name__ == "__main__":
     text = get_input(2019, 1)
 
-    print(a(text))
-    print(b(text))
+    print(part1(text))
+    print(part2(text))

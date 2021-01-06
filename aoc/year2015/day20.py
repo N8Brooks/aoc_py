@@ -13,7 +13,7 @@ from aoc.utils import get_input
 # TODO: there are better solutions than brute force
 
 
-def a(text):
+def part1(text):
     n = int(text)
     houses = np.full(n // 10 + 2, 10, int)
     houses[0] = 0
@@ -22,7 +22,7 @@ def a(text):
     return np.argmax(houses >= n)
 
 
-def b(text):
+def part2(text):
     n = int(text)
     houses = np.zeros(n // 10 + 2, int)
     for i in range(1, n // 10 + 2):
@@ -33,5 +33,5 @@ def b(text):
 if __name__ == "__main__":
     text = get_input(2015, 20)
 
-    print(a(text))
-    print(b(text))
+    print(part1(text))
+    print(part2(text))

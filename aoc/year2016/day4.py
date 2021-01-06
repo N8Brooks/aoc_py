@@ -24,11 +24,11 @@ def process(text, r=re.compile(r"([a-z-]+)-(\d+)\[([a-z]+)\]")):
             yield int(section), name
 
 
-def a(text):
+def part1(text):
     return sum(next(zip(*process(text))))
 
 
-def b(text, target="northpole object storage"):
+def part2(text, target="northpole object storage"):
     def shift(word, n):
         return "".join(chr((ord(c) - 97 + n) % 26 + 97) for c in word)
 
@@ -43,5 +43,5 @@ def b(text, target="northpole object storage"):
 if __name__ == "__main__":
     text = get_input(2016, 4)
 
-    print(a(text))
-    print(b(text))
+    print(part1(text))
+    print(part2(text))

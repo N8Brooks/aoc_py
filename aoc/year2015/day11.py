@@ -15,7 +15,7 @@ from aoc.utils import get_input
 IOL = {8, 11, 14}
 
 
-def a(text):
+def part1(text):
     def next_pass(password, _=None):
         for i, x in zip(reversed(range(_n)), reversed(password)):
             if (x := x + 1) in IOL:
@@ -49,12 +49,12 @@ def a(text):
     return "".join(chr(i + 97) for i in next(filter(valid, passwords)))
 
 
-def b(text):
-    return a(a(text))
+def part2(text):
+    return part1(part1(text))
 
 
 if __name__ == "__main__":
     text = get_input(2015, 11)
 
-    print(a(text))
-    print(b(text))
+    print(part1(text))
+    print(part2(text))

@@ -11,11 +11,11 @@ from statistics import mode
 from aoc.utils import get_input
 
 
-def a(text):
+def part1(text):
     return "".join(map(mode, zip(*text.strip().split("\n"))))
 
 
-def b(text):
+def part2(text):
     def antimode(message):
         counts = Counter(message)
         return min(counts, key=counts.get)
@@ -26,5 +26,5 @@ def b(text):
 if __name__ == "__main__":
     text = get_input(2016, 6)
 
-    print(a(text))
-    print(b(text))
+    print(part1(text))
+    print(part2(text))

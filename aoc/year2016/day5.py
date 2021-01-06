@@ -25,12 +25,12 @@ def hashes(text, start):
     return filter(valid, map(hash_i, count()))
 
 
-def a(text, length=8, start="00000"):
+def part1(text, length=8, start="00000"):
     iterator = (hash_i[len(start)] for hash_i in hashes(text, start))
     return "".join(islice(iterator, 0, length))
 
 
-def b(text, length=8, start="00000"):
+def part2(text, length=8, start="00000"):
     def char(i):
         while password[i] is None:
             code = next(iterator)
@@ -49,5 +49,5 @@ def b(text, length=8, start="00000"):
 if __name__ == "__main__":
     text = get_input(2016, 5)
 
-    print(a(text))
-    print(b(text))
+    print(part1(text))
+    print(part2(text))

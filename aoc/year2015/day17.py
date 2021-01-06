@@ -14,7 +14,7 @@ from more_itertools import ilen
 from aoc.utils import get_input
 
 
-def a(text, target=150):
+def part1(text, target=150):
     def update(freq, b):
         freq += {a + b: count for a, count in freq.items() if a + b <= target}
         return freq
@@ -22,7 +22,7 @@ def a(text, target=150):
     return reduce(update, map(int, text.split()), Counter((0,))).get(target, 0)
 
 
-def b(text, target=150):
+def part2(text, target=150):
     def target_sum(combo):
         return sum(combo) == target
 
@@ -37,5 +37,5 @@ def b(text, target=150):
 if __name__ == "__main__":
     text = get_input(2015, 17)
 
-    print(a(text))
-    print(b(text))
+    print(part1(text))
+    print(part2(text))

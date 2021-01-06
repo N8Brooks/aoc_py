@@ -6,7 +6,7 @@ https://adventofcode.com/2017/day/2
 
 from unittest import main, TestCase
 
-from aoc.year2017.day2 import a, b
+from aoc.year2017.day2 import part1, part2
 from aoc.utils import get_input
 
 
@@ -21,20 +21,20 @@ EXAMPLE_2 = """5 9 2 8
 """
 
 
-class TestA(TestCase):
+class TestPart1(TestCase):
     def test_input(self):
-        self.assertEqual(a(get_input(2017, 2)), 51833)
+        self.assertEqual(part1(get_input(2017, 2)), 51833)
 
     def test_example(self):
-        self.assertEqual(a(EXAMPLE_1), 18)
+        self.assertEqual(part1(EXAMPLE_1), 18)
 
 
-class TestB(TestCase):
+class TestPart2(TestCase):
     def test_input(self):
-        self.assertEqual(b(get_input(2017, 2)), 288)
+        self.assertEqual(part2(get_input(2017, 2)), 288)
 
     def test_example(self):
-        self.assertEqual(b(EXAMPLE_2), 9)
+        self.assertEqual(part2(EXAMPLE_2), 9)
 
 
 if __name__ == "__main__":

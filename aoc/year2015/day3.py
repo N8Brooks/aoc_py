@@ -21,11 +21,11 @@ def direction(char):
         return -1
 
 
-def a(text):
+def part1(text):
     return len(set({0} | set(accumulate(map(direction, text)))))
 
 
-def b(text):
+def part2(text):
     locations = {0}
     locations.update(accumulate(map(direction, islice(text, 0, None, 2))))
     locations.update(accumulate(map(direction, islice(text, 1, None, 2))))
@@ -36,5 +36,5 @@ def b(text):
 if __name__ == "__main__":
     text = get_input(2015, 3)
 
-    print(a(text))
-    print(b(text))
+    print(part1(text))
+    print(part2(text))

@@ -6,7 +6,7 @@ https://adventofcode.com/2015/day/9
 
 from unittest import TestCase, main
 
-from aoc.year2015.day9 import a, b
+from aoc.year2015.day9 import part1, part2
 from aoc.utils import get_input
 
 
@@ -16,20 +16,20 @@ Dublin to Belfast = 141
 """
 
 
-class TestA(TestCase):
+class TestPart1(TestCase):
     def test_input(self):
-        self.assertEqual(a(get_input(2015, 9)), 117)
+        self.assertEqual(part1(get_input(2015, 9)), 117)
 
     def test_example(self):
-        self.assertEqual(a(EXAMPLE), 605)
+        self.assertEqual(part1(EXAMPLE), 605)
 
 
-class TestB(TestCase):
+class TestPart2(TestCase):
     def test_input(self):
-        self.assertEqual(b(get_input(2015, 9)), 909)
+        self.assertEqual(part2(get_input(2015, 9)), 909)
 
     def test_example(self):
-        self.assertEqual(b(EXAMPLE), 982)
+        self.assertEqual(part2(EXAMPLE), 982)
 
 
 if __name__ == "__main__":

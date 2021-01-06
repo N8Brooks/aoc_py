@@ -6,7 +6,7 @@ https://adventofcode.com/2015/day/15
 
 from unittest import main, skip, TestCase
 
-from aoc.year2015.day15 import a, b
+from aoc.year2015.day15 import part1, part2
 from aoc.utils import get_input
 
 
@@ -16,22 +16,20 @@ Cinnamon: capacity 2, durability 3, flavor -2, texture -1, calories 3
 """
 
 
-class TestA(TestCase):
-    @skip("Takes too long")
+class TestPart1(TestCase):
     def test_input(self):
-        self.assertEqual(a(get_input(2015, 15)), 18965440)
+        self.assertEqual(part1(get_input(2015, 15)), 18965440)
 
     def test_example(self):
-        self.assertEqual(a(EXAMPLE), 62842880)
+        self.assertEqual(part1(EXAMPLE), 62842880)
 
 
-class TestB(TestCase):
-    @skip("Takes too long")
+class TestPart2(TestCase):
     def test_input(self):
-        self.assertEqual(b(get_input(2015, 15)), 15862900)
+        self.assertEqual(part2(get_input(2015, 15)), 15862900)
 
     def test_example(self):
-        self.assertEqual(b(EXAMPLE), 57600000)
+        self.assertEqual(part2(EXAMPLE), 57600000)
 
 
 if __name__ == "__main__":

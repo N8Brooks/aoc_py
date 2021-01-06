@@ -26,11 +26,11 @@ def manhatten(location):
     return int(abs(location.imag) + abs(location.real))
 
 
-def a(text):
+def part1(text):
     return manhatten(sum(map(mul, *process(text))))
 
 
-def b(text):
+def part2(text):
     def visited(location):
         if location in previous:
             return True
@@ -47,5 +47,5 @@ def b(text):
 if __name__ == "__main__":
     text = get_input(2016, 1)
 
-    print(a(text))
-    print(b(text))
+    print(part1(text))
+    print(part2(text))

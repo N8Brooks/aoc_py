@@ -11,7 +11,7 @@ from hashlib import md5
 from aoc.utils import get_input
 
 
-def ab(text, start):
+def process(text, start):
     def valid(suffix):
         hasher = prefix.copy()
         hasher.update(str(suffix).encode())
@@ -23,8 +23,16 @@ def ab(text, start):
     return next(filter(valid, count()))
 
 
+def part1(text, start="00000"):
+    return process(text, start)
+
+
+def part2(text, start="000000"):
+    return process(text, start)
+
+
 if __name__ == "__main__":
     text = get_input(2015, 4)
 
-    print(ab(text, "00000"))
-    print(ab(text, "000000"))
+    print(part1(text))
+    print(part2(text))

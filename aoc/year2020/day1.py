@@ -11,7 +11,7 @@ from operator import mul
 from aoc.utils import get_input
 
 
-def a(text, total):
+def part1(text, total=2020):
     def add(entry):
         if total - entry in entries:
             return True
@@ -25,7 +25,7 @@ def a(text, total):
     return fix(next(filter(add, map(int, text.split()))))
 
 
-def b(text, total):
+def part2(text, total=2020):
     def add(entry):
         if total - entry in twos:
             return True
@@ -44,5 +44,5 @@ def b(text, total):
 if __name__ == "__main__":
     text = get_input(2020, 1)
 
-    print(a(text, 2020))
-    print(b(text, 2020))
+    print(part1(text))
+    print(part2(text))
