@@ -10,7 +10,7 @@ import re
 
 from more_itertools import consume
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 def process(text):

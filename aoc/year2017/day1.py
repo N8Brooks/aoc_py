@@ -5,7 +5,7 @@ https://adventofcode.com/2017/day/1
 """
 
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 def process(func):

@@ -11,7 +11,7 @@ import re
 
 from more_itertools import consume, pairwise
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 # TODO: replace double dict data structure with matrix

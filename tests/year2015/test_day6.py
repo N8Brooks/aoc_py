@@ -7,7 +7,7 @@ https://adventofcode.com/2015/day/6
 from unittest import TestCase, main
 
 from aoc.year2015.day6 import part1, part2
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 class TestPart1(TestCase):

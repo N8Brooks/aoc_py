@@ -8,7 +8,7 @@ https://adventofcode.com/2019/day/1
 from itertools import repeat, takewhile
 
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 def part1(text):

@@ -7,7 +7,7 @@ https://adventofcode.com/2015/day/1
 
 from itertools import accumulate
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 def part1(text):

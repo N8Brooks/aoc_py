@@ -10,7 +10,7 @@ import re
 
 import numpy as np
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 R = re.compile(

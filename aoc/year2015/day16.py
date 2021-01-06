@@ -7,7 +7,7 @@ https://adventofcode.com/2015/day/16
 
 import re
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 TARGET = {

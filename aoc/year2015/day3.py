@@ -7,7 +7,7 @@ https://adventofcode.com/2015/day/3
 
 from itertools import accumulate, islice
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 def direction(char):

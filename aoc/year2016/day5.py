@@ -8,7 +8,7 @@ https://adventofcode.com/2016/day/5
 from hashlib import md5
 from itertools import count, islice
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 def hashes(text, start):

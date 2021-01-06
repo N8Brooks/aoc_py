@@ -8,7 +8,7 @@ https://adventofcode.com/2016/day/6
 from collections import Counter
 from statistics import mode
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 def part1(text):

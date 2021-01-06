@@ -11,7 +11,7 @@ from itertools import combinations
 
 from more_itertools import ilen
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 def part1(text, target=150):

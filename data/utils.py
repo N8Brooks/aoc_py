@@ -32,7 +32,7 @@ def get_cookies():
 
 def get_input(year, day):
     root_path = get_root_path()
-    path = os.path.join(root_path, "input", f"year{year}", f"day{day}.txt")
+    path = os.path.join(root_path, f"year{year}", f"day{day}.txt")
 
     if os.path.isfile(path):
         with open(path, "r") as file:

@@ -7,7 +7,7 @@ https://adventofcode.com/2015/day/10
 from unittest import main, skip, TestCase
 
 from aoc.year2015.day10 import look_say, part1, part2
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 class TestLookSay(TestCase):

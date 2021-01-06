@@ -9,7 +9,7 @@ from itertools import combinations, filterfalse, product
 from math import ceil, inf
 import re
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 WEAPONS = (

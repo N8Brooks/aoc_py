@@ -8,7 +8,7 @@ https://adventofcode.com/2015/day/10
 import re
 from functools import reduce
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 def look_say(num, _=None, r=re.compile(r"(.)\1*")):

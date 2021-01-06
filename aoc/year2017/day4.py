@@ -7,7 +7,7 @@ https://adventofcode.com/2017/day/4
 
 from itertools import combinations
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 def part1(text):

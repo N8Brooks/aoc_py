@@ -8,7 +8,7 @@ https://adventofcode.com/2015/day/4
 from itertools import count
 from hashlib import md5
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 def process(text, start):

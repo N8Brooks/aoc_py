@@ -9,7 +9,7 @@ from itertools import starmap, repeat, accumulate
 
 from more_itertools import pairwise, windowed
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 IOL = {8, 11, 14}

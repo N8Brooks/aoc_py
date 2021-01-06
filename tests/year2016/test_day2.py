@@ -7,7 +7,7 @@ https://adventofcode.com/2016/day/2
 from unittest import main, TestCase
 
 from aoc.year2016.day2 import part1, part2
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 EXAMPLE = """ULL

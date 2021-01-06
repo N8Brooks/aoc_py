@@ -9,7 +9,7 @@ from collections import deque
 from itertools import filterfalse
 
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 COMP = (1 << 16) - 1

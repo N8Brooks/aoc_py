@@ -9,7 +9,7 @@ from itertools import accumulate, islice
 from functools import reduce
 
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 DIRS = {"L": -1, "U": 1j, "R": 1, "D": -1j}

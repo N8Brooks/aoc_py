@@ -9,7 +9,7 @@ from heapq import nsmallest
 from itertools import repeat
 import re
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 def process(text, r=re.compile(r"([a-z-]+)-(\d+)\[([a-z]+)\]")):

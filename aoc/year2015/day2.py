@@ -7,7 +7,7 @@ https://adventofcode.com/2015/day/2
 
 from itertools import starmap
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 def process(text):

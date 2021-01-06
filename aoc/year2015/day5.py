@@ -10,7 +10,7 @@ from operator import eq, ne
 
 from more_itertools import pairwise
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 def part1(text):

@@ -9,7 +9,7 @@ from itertools import starmap
 
 from more_itertools import windowed, flatten
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 def process(ip):

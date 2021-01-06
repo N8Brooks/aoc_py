@@ -7,7 +7,7 @@ https://adventofcode.com/2015/day/13
 from unittest import main, skip, TestCase
 
 from aoc.year2015.day13 import part1, part2
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 EXAMPLE = """Alice would gain 54 happiness units by sitting next to Bob.

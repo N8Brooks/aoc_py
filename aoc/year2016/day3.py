@@ -9,7 +9,7 @@ from itertools import chain
 
 from more_itertools import ichunked
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 def total(iterable):

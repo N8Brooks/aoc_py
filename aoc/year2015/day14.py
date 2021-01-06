@@ -9,7 +9,7 @@ from itertools import accumulate, chain, cycle, islice, repeat, starmap
 import re
 from statistics import mode
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 R = re.compile(

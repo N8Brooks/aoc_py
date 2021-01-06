@@ -7,7 +7,7 @@ https://adventofcode.com/2015/day/9
 from unittest import TestCase, main
 
 from aoc.year2015.day9 import part1, part2
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 EXAMPLE = """London to Dublin = 464

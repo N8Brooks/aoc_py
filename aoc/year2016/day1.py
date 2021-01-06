@@ -10,7 +10,7 @@ from operator import mul
 import re
 
 
-from aoc.utils import get_input
+from data.utils import get_input
 
 
 def process(text, r=re.compile(r"([LR])(\d+)")):
