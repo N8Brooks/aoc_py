@@ -7,6 +7,7 @@ https://adventofcode.com/2018/day/1
 
 from itertools import accumulate, cycle
 
+from iteration_utilities import duplicates
 
 from data.utils import get_input
 
@@ -16,16 +17,9 @@ def part1(text):
 
 
 def part2(text):
-    def visited(frequency):
-        if frequency in previous:
-            return True
-        previous.add(frequency)
-
-    previous = set()
-
     frequencies = accumulate(cycle(map(int, text.split())), initial=0)
 
-    return next(filter(visited, frequencies))
+    return next(duplicates(frequencies))
 
 
 if __name__ == "__main__":

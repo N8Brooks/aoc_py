@@ -9,6 +9,7 @@ from itertools import accumulate, chain, repeat
 from operator import mul
 import re
 
+from iteration_utilities import duplicates
 
 from data.utils import get_input
 
@@ -31,17 +32,9 @@ def part1(text):
 
 
 def part2(text):
-    def visited(location):
-        if location in previous:
-            return True
-        previous.add(location)
-
-    previous = set()
-
     movements = chain.from_iterable(map(repeat, *process(text)))
-    locations = accumulate(movements, initial=0)
 
-    return manhatten(next(filter(visited, locations)))
+    return manhatten(next(duplicates(accumulate(movements, initial=0))))
 
 
 if __name__ == "__main__":

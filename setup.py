@@ -20,5 +20,9 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     python_requires=">=3.9",
-    install_requires=["numpy>=1.19.2", "more_itertools>=8.6.0"],
+    install_requires=[
+        "numpy>=1.19.2",
+        "more_itertools>=8.6.0",
+        "iteration_utilities>=0.11.0",
+    ],
 )
