@@ -10,15 +10,13 @@ from aoc.year2016.day7 import part1, part2
 from data.utils import get_input
 
 
-EXAMPLE_1 = """
-abba[mnop]qrst
+EXAMPLE_1 = """abba[mnop]qrst
 abcd[bddb]xyyx
 aaaa[qwer]tyui
 ioxxoj[asdfgh]zxcvbn
 """
 
-EXAMPLE_2 = """
-aba[bab]xyz
+EXAMPLE_2 = """aba[bab]xyz
 xyx[xyx]xyx
 aaa[kek]eke
 zazbz[bzb]cdb
