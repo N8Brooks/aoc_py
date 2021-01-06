@@ -27,9 +27,9 @@ class Family:
         self.individuals = {x for xy in self.pairs for x in xy}
 
     def _process(self, line):
-        x, sign, value, y = Family.__r.match(line).groups()
+        a, sign, value, b = Family.__r.match(line).groups()
         mult = 1 if sign == "gain" else -1
-        self.pairs[frozenset((x, y))] += mult * int(value)
+        self.pairs[frozenset((a, b))] += mult * int(value)
 
     def _pair(self, xy):
         return self.pairs[frozenset(xy)]

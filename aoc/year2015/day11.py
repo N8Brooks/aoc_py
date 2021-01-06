@@ -28,8 +28,8 @@ def part1(text):
                 break
         return password
 
-    def straight(x, y, z):
-        return x + 1 == y and y + 1 == z
+    def straight(a, b, c):
+        return a + 1 == b and b + 1 == c
 
     def valid(string):
         if 8 in string or 11 in string or 14 in string:

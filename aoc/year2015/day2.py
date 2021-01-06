@@ -15,15 +15,15 @@ def process(text):
 
 
 def part1(text):
-    def paper(x, y, z):
-        return 3 * x * y + 2 * (x * z + y * z)
+    def paper(a, b, c):
+        return 3 * a * b + 2 * (a * c + b * c)
 
     return sum(starmap(paper, process(text)))
 
 
 def part2(text):
-    def ribbon(x, y, z):
-        return x + x + y + y + x * y * z
+    def ribbon(a, b, c):
+        return a + a + b + b + a * b * c
 
     return sum(starmap(ribbon, process(text)))
 

@@ -28,8 +28,8 @@ RINGS = (
 
 
 def simulate(text, worst, p_health):
-    def turns(x, y):
-        return inf if y <= 0 else ceil(x / y)
+    def turns(a, b):
+        return inf if b <= 0 else ceil(a / b)
 
     def battle(equipment):
         _, p_damage, p_armor = equipment
