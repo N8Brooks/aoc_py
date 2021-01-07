@@ -9,6 +9,8 @@ from itertools import accumulate, chain, cycle, islice, repeat, starmap
 import re
 from statistics import mode
 
+from iteration_utilities import argmax
+
 from data.utils import get_input
 
 
@@ -40,11 +42,8 @@ def part2(text, total=2503):
         iterable = chain(repeat(speed, flying), repeat(0, resting))
         yield from accumulate(cycle(iterable))
 
-    def imax(dists):
-        return dists.index(max(dists))
-
     iterable = zip(*starmap(distances, process(text)))
-    counts = tuple(map(imax, islice(iterable, total)))
+    counts = tuple(map(argmax, islice(iterable, total)))
 
     return counts.count(mode(counts))
 
