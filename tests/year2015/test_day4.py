@@ -47,13 +47,13 @@ class TestPart2(TestCase):
         self.assertEqual(part2("pqrstuv"), 5714438)
 
     def test_mock_1(self):
-        self.assertEqual(part1("123", "0"), 10)
+        self.assertEqual(part2("123", "0"), 10)
 
     def test_mock_2(self):
-        self.assertEqual(part1("panda", "00"), 107)
+        self.assertEqual(part2("panda", "00"), 107)
 
     def test_mock_3(self):
-        self.assertEqual(part1("giraff", "000"), 1803)
+        self.assertEqual(part2("giraff", "000"), 1803)
 
 
 if __name__ == "__main__":  # pragma: no cover

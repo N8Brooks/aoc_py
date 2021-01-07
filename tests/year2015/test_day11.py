@@ -43,7 +43,6 @@ class TestPart2(TestCase):
     def test_example_2(self):
         self.assertEqual(part2("ghijklmn"), "ghjbbcdd")
 
-    @skip("Takes too long")
     def test_mock_1(self):
         self.assertEqual(part2("aabcb"), "bbcdd")
 

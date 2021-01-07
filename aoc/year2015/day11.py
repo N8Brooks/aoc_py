@@ -5,9 +5,11 @@ https://adventofcode.com/2015/day/11
 """
 
 
-from itertools import starmap, repeat, accumulate
+from itertools import accumulate, starmap, repeat
+from operator import eq
 
-from more_itertools import pairwise, windowed
+from iteration_utilities import starfilter, successive, unique_everseen
+from more_itertools import ilen
 
 from data.utils import get_input
 
@@ -17,10 +19,10 @@ IOL = {8, 11, 14}
 
 def part1(text):
     def next_pass(password, _=None):
-        for i, x in zip(reversed(range(_n)), reversed(password)):
+        for i, x in zip(reversed(range(n)), reversed(password)):
             if (x := x + 1) in IOL:
                 password[i] = x + 1
-                password[i + 1 :] = repeat(0, _n - i - 1)
+                password[i + 1 :] = repeat(0, n - i - 1)
             if x == 26:
                 password[i] = 0
             else:
@@ -35,12 +37,12 @@ def part1(text):
         if 8 in string or 11 in string or 14 in string:
             return False
 
-        if not any(starmap(straight, windowed(string, 3))):
+        if not any(starmap(straight, successive(string, 3))):
             return False
 
-        return 1 < len(set((a, b) for a, b in pairwise(string) if a == b))
+        return 1 < ilen(unique_everseen(starfilter(eq, successive(string))))
 
-    _n = len(processed := text.strip())
+    n = len(processed := text.strip())
 
     password = next_pass(list(i - 97 for i in map(ord, processed)))
 
@@ -50,6 +52,7 @@ def part1(text):
 
 
 def part2(text):
+    # Call part1 redundantly
     return part1(part1(text))
 
 
