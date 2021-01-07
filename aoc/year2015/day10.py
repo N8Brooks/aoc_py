@@ -5,14 +5,16 @@ https://adventofcode.com/2015/day/10
 """
 
 
-import re
 from functools import reduce
+from itertools import groupby
+
+from iteration_utilities import count_items
 
 from data.utils import get_input
 
 
-def look_say(num, _=None, r=re.compile(r"(.)\1*")):
-    return r.sub(lambda m: f"{len(m.group(0))}{m.group(1)}", num)
+def look_say(s, _=None):
+    return "".join(f"{count_items(g)}{d}" for d, g in groupby(s))
 
 
 def process(text, iterations):
