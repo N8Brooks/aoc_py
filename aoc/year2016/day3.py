@@ -31,7 +31,7 @@ def part2(text):
     return total(ichunked(chain.from_iterable(zip(*process(text))), 3))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2016, 3)
 
     print(part1(text))

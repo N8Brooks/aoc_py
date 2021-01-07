@@ -62,7 +62,7 @@ def part2(text, shape=(6, 50)):
     return "".join(map(LETTERS.get, hashes))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2016, 8)
 
     print(part1(text))

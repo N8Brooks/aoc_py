@@ -42,7 +42,7 @@ def part2(text):
     return max(process(text))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2015, 9)
 
     print(part1(text))

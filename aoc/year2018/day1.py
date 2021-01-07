@@ -22,7 +22,7 @@ def part2(text):
     return next(duplicates(frequencies))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2018, 1)
 
     print(part1(text))

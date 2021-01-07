@@ -23,7 +23,7 @@ def part2(text):
     return next(i for i, floor in position_floor if floor < 0)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2015, 1)
 
     print(part1(text))

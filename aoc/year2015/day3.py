@@ -33,7 +33,7 @@ def part2(text):
     return len(locations)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2015, 3)
 
     print(part1(text))

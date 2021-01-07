@@ -54,5 +54,5 @@ class TestPart2(TestCase):
         self.assertEqual(part2(MOCK_3), 9)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main()

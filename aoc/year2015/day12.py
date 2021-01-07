@@ -41,7 +41,7 @@ def part2(text):
     return parse(loads(text))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2015, 12)
 
     print(part1(text))

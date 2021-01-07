@@ -42,5 +42,5 @@ class TestPart2(TestCase):
         self.assertEqual(part2("xyz", 2, "00"), "cd")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main()

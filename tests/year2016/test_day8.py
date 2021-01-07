@@ -30,5 +30,5 @@ class TestPart2(TestCase):
         self.assertEqual(part2(get_input(2016, 8)), "RURUCEOEIL")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main()

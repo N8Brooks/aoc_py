@@ -56,7 +56,7 @@ def part2(text):
     return find_sue(text, valid_prop)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2015, 16)
 
     print(part1(text))

@@ -85,7 +85,7 @@ def part2(text, request="a"):
     return compute(q, request)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2015, 7)
 
     print(part1(text))

@@ -23,7 +23,7 @@ def part2(text):
     return sum(map(fuel, map(int, text.split())))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2019, 1)
 
     print(part1(text))

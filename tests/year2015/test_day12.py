@@ -56,5 +56,5 @@ class TestPart2(TestCase):
         self.assertEqual(part2('[1,"red",5]'), 6)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main()

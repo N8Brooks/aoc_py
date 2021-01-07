@@ -41,7 +41,7 @@ def part2(text):
     return grid[c]
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2017, 3)
 
     print(part1(text))

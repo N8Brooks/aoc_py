@@ -37,7 +37,7 @@ def part2(text):
     return manhatten(next(duplicates(accumulate(movements, initial=0))))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2016, 1)
 
     print(part1(text))

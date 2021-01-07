@@ -32,5 +32,5 @@ class TestPart2(TestCase):
         self.assertEqual(part2(EXAMPLE, 1000), 688)  # Doesn't match site?
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main()

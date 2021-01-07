@@ -31,7 +31,7 @@ def part2(text, start="000000"):
     return process(text, start)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2015, 4)
 
     print(part1(text))

@@ -60,7 +60,7 @@ def part2(text, target=500):
     return max(map(score, filtered, repeat(matrix)))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2015, 15)
 
     print(part1(text))

@@ -64,7 +64,7 @@ def part2(text, initial=-2 + 0j):
     return simulate(text, KEYPAD_B, initial)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2016, 2)
 
     print(part1(text))

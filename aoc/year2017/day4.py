@@ -26,7 +26,7 @@ def part2(text):
     return sum(map(valid, text.strip().split("\n")))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2017, 4)
 
     print(part1(text))

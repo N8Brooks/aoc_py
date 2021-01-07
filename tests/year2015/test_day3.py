@@ -38,5 +38,5 @@ class TestPart2(TestCase):
         self.assertEqual(part2("^v^v^v^v^v"), 11)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main()

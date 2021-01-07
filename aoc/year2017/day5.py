@@ -34,7 +34,7 @@ def part2(text):
     return ilen(takewhile(lambda i: i < n, applyfunc(jump, 0))) + 1
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2017, 5)
 
     print(part1(text))

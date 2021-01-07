@@ -34,7 +34,7 @@ def part2(text, target=150):
     return next(filter(bool, map(valid_combo, range(len(nums)))))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2015, 17)
 
     print(part1(text))

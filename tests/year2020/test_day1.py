@@ -26,5 +26,5 @@ class TestPart2(TestCase):
         self.assertEqual(part2("1721 979 366 299 675 1456"), 241861950)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main()

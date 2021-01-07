@@ -61,7 +61,7 @@ def part2(text, p_health=100):
     return simulate(text, True, p_health)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2015, 21)
 
     print(part1(text))

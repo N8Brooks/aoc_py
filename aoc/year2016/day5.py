@@ -46,7 +46,7 @@ def part2(text, length=8, start="00000"):
     return "".join(map(char, range(length)))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2016, 5)
 
     print(part1(text))

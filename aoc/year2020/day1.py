@@ -41,7 +41,7 @@ def part2(text, total=2020):
     return fix(next(filter(add, map(int, text.split()))))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2020, 1)
 
     print(part1(text))

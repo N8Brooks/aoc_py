@@ -42,5 +42,5 @@ class TestPart2(TestCase):
         self.assertEqual(part2(EXAMPLE_2, "very encrypted name"), 343)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main()

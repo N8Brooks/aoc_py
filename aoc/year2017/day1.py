@@ -31,7 +31,7 @@ def part2(processed):
     return sum(processed[i] for i in filter(match, range(len(processed))))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2017, 1)
 
     print(part1(text))

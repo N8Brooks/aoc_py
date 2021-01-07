@@ -52,7 +52,7 @@ def part2(text):
     return sum(starmap(ssl, map(process, text.strip().split())))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2016, 7)
 
     print(part1(text))

@@ -53,7 +53,7 @@ def part2(text, starting="e"):
     pass
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2015, 19)
 
     print(part1(text))

@@ -53,7 +53,7 @@ def part2(text):
     return ilen(takewhile(unique, applyfunc(graph.get, node))) + 1
 
 
-if __name__ == "__main__":  # pragma: no cover
+if __name__ == "__main__":  # pragma: no cover  # pragma: no cover
     text = get_input(2017, 6)
 
     print(part1(text))

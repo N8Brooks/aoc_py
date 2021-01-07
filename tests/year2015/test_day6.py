@@ -35,5 +35,5 @@ class TestPart2(TestCase):
         self.assertEqual(part2("toggle 0,0 through 999,999"), 2000000)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main()

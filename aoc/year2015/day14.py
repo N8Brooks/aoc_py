@@ -48,7 +48,7 @@ def part2(text, total=2503):
     return counts.count(mode(counts))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     text = get_input(2015, 14)
 
     print(part1(text))
