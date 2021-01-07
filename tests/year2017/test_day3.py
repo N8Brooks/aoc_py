@@ -16,13 +16,13 @@ class TestPart1(TestCase):
 
     def test_example_1(self):
         self.assertEqual(part1(1), 0)
-        
+
     def test_example_2(self):
         self.assertEqual(part1(12), 3)
-        
+
     def test_example_3(self):
         self.assertEqual(part1(23), 2)
-        
+
     def test_example_4(self):
         self.assertEqual(part1(1024), 31)
 
@@ -33,13 +33,13 @@ class TestPart2(TestCase):
 
     def test_example_1(self):
         self.assertEqual(part2(0), 1)
-        
+
     def test_example_2(self):
         self.assertEqual(part2(54), 57)
-        
+
     def test_example_3(self):
         self.assertEqual(part2(800), 806)
-        
+
     def test_example_4(self):
         self.assertEqual(part2(1000000), 1009457)
 
