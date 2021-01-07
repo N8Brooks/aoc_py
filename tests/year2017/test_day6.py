@@ -24,7 +24,7 @@ class TestPart1(TestCase):
     def test_input(self):
         self.assertEqual(part1(get_input(2017, 6)), 12841)
 
-    def test_example_1(self):
+    def test_example(self):
         self.assertEqual(part1(EXAMPLE), 5)
 
     def test_mock_1(self):
@@ -42,7 +42,7 @@ class TestPart2(TestCase):
     def test_input(self):
         self.assertEqual(part2(get_input(2017, 6)), 8038)
 
-    def test_example_1(self):
+    def test_example(self):
         self.assertEqual(part2(EXAMPLE), 4)
 
     def test_mock_1(self):
