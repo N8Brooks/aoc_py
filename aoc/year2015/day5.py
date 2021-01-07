@@ -8,7 +8,7 @@ https://adventofcode.com/2015/day/5
 from itertools import islice, starmap
 from operator import eq, ne
 
-from more_itertools import pairwise
+from iteration_utilities import successive
 
 from data.utils import get_input
 
@@ -18,7 +18,7 @@ def part1(text):
         if any(two in string for two in ("ab", "cd", "pq", "xy")):
             return False
 
-        if all(starmap(ne, pairwise(string))):
+        if all(starmap(ne, successive(string))):
             return False
 
         return 3 <= sum(map(string.count, "aeiou"))
@@ -28,7 +28,7 @@ def part1(text):
 
 def part2(text):
     def split_pair(string, start):
-        return any(starmap(eq, pairwise(islice(string, start, None, 2))))
+        return any(starmap(eq, successive(islice(string, start, None, 2))))
 
     def twin_pair(first, second):
         if second in seen:
@@ -41,7 +41,7 @@ def part2(text):
 
         seen.clear()
 
-        return any(starmap(twin_pair, pairwise(pairwise(string))))
+        return any(starmap(twin_pair, successive(successive(string))))
 
     seen = set()
 

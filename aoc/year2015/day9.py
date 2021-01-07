@@ -9,7 +9,8 @@ from collections import defaultdict
 from itertools import permutations
 import re
 
-from more_itertools import consume, pairwise
+from iteration_utilities import successive
+from more_itertools import consume
 
 from data.utils import get_input
 
@@ -19,7 +20,7 @@ from data.utils import get_input
 
 def process(text):
     def distance(path):
-        return sum(dist[a][b] for a, b in pairwise(path))
+        return sum(dist[a][b] for a, b in successive(path))
 
     def unpack(line):
         a, b, d = r.match(line).groups()

@@ -9,8 +9,7 @@ from functools import partial
 from itertools import chain, islice, repeat, takewhile
 from operator import add, ne
 
-from iteration_utilities import applyfunc, argmax, last
-from more_itertools import ilen
+from iteration_utilities import applyfunc, argmax, count_items, last
 
 from data.utils import get_input
 
@@ -50,7 +49,7 @@ def part1(text):
 def part2(text):
     graph, node = process(text)
     unique = partial(ne, node)
-    return ilen(takewhile(unique, applyfunc(graph.get, node))) + 1
+    return count_items(takewhile(unique, applyfunc(graph.get, node))) + 1
 
 
 if __name__ == "__main__":  # pragma: no cover  # pragma: no cover

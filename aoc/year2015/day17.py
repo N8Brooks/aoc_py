@@ -9,7 +9,7 @@ from collections import Counter
 from functools import reduce
 from itertools import combinations
 
-from more_itertools import ilen
+from iteration_utilities import count_items
 
 from data.utils import get_input
 
@@ -27,7 +27,7 @@ def part2(text, target=150):
         return sum(combo) == target
 
     def valid_combo(k):
-        return ilen(filter(target_sum, combinations(nums, k)))
+        return count_items(combinations(nums, k), target_sum)
 
     nums = tuple(map(int, text.split()))
 

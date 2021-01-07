@@ -7,8 +7,7 @@ https://adventofcode.com/2017/day/5
 
 from itertools import takewhile
 
-from iteration_utilities import applyfunc
-from more_itertools import ilen
+from iteration_utilities import applyfunc, count_items
 
 from data.utils import get_input
 
@@ -20,7 +19,7 @@ def part1(text):
 
     n = len(instructions := list(map(int, text.split())))
 
-    return ilen(takewhile(lambda i: i < n, applyfunc(jump, 0))) + 1
+    return count_items(takewhile(lambda i: i < n, applyfunc(jump, 0))) + 1
 
 
 def part2(text):
@@ -31,7 +30,7 @@ def part2(text):
 
     n = len(instructions := list(map(int, text.split())))
 
-    return ilen(takewhile(lambda i: i < n, applyfunc(jump, 0))) + 1
+    return count_items(takewhile(lambda i: i < n, applyfunc(jump, 0))) + 1
 
 
 if __name__ == "__main__":  # pragma: no cover

@@ -8,6 +8,7 @@ https://adventofcode.com/2015/day/7
 from collections import deque
 from itertools import filterfalse
 
+from iteration_utilities import is_None
 
 from data.utils import get_input
 
@@ -34,19 +35,19 @@ def compute(q, request):
             return int(operand)
 
     def move(exp, dest):
-        if (res := val(exp[0])) is None:
+        if is_None(res := val(exp[0])):
             q.append((exp, dest))
         else:
             _reg[dest] = res
 
     def complement(exp, dest):
-        if (res := val(exp[1])) is None:
+        if is_None(res := val(exp[1])):
             q.append((exp, dest))
         else:
             _reg[dest] = COMP ^ res
 
     def instruct(exp, dest):
-        if (res1 := val(exp[0])) is None or (res2 := val(exp[2])) is None:
+        if is_None(res1 := val(exp[0])) or is_None(res2 := val(exp[2])):
             q.append((exp, dest))
             return
         if exp[1] == "AND":
