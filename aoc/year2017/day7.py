@@ -9,23 +9,21 @@ from itertools import chain
 import re
 from statistics import mode
 
-from iteration_utilities import all_equal, consume, empty
+from iteration_utilities import all_equal, empty
 
 from data.utils import get_input
 
 
 def unique(iterable):
-    def helper(element):
+    one = set()
+    two = set()
+
+    for element in iterable:
         if element in one:
             one.remove(element)
             two.add(element)
         elif element not in two:
             one.add(element)
-
-    one = set()
-    two = set()
-
-    consume(map(helper, iterable), None)
 
     return one.pop()
 
@@ -43,17 +41,15 @@ def part2(text):
         yield node
         yield from chain(*map(deepflatten, graph[node]))
 
-    def append(line):
-        parent, weight, kids = r.match(line).groups()
-        graph[parent] = empty if kids is None else kids.split(", ")
-        weights[parent] = int(weight)
-
     r = re.compile(r"([a-z]+) \((\d+)\)(?: -> (.*))?")
 
     weights = {}
     graph = {}
 
-    consume(map(append, text.strip().split("\n")), None)
+    for line in text.strip().split("\n"):
+        parent, weight, kids = r.match(line).groups()
+        graph[parent] = empty if kids is None else kids.split(", ")
+        weights[parent] = int(weight)
 
     scale(head := unique(chain.from_iterable(map(deepflatten, graph))))
     sibs = kids = dict((kid, weights[kid]) for kid in graph[head])

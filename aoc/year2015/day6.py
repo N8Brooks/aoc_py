@@ -5,11 +5,10 @@ https://adventofcode.com/2015/day/6
 """
 
 
-from itertools import starmap
 import numpy as np
 import re
 
-from more_itertools import consume, last
+from iteration_utilities import last
 
 from data.utils import get_input
 
@@ -17,8 +16,8 @@ from data.utils import get_input
 def process(text, instruction, grid):
     r = re.compile(r"(\D+) (\d+),(\d+) through (\d+),(\d+)")
 
-    processed = (r.match(line).groups() for line in text.strip().split("\n"))
-    consume(starmap(instruction, processed))
+    for line in text.strip().split("\n"):
+        instruction(*r.match(line).groups())
 
     return int(grid.sum())
 

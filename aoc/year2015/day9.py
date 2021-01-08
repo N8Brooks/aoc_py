@@ -10,7 +10,6 @@ from itertools import permutations
 import re
 
 from iteration_utilities import successive
-from more_itertools import consume
 
 from data.utils import get_input
 
@@ -19,15 +18,13 @@ def process(text):
     def distance(path):
         return sum(dist[a][b] for a, b in successive(path))
 
-    def unpack(line):
-        a, b, d = r.match(line).groups()
-        dist[a][b] = dist[b][a] = int(d)
-
     r = re.compile(r"(\w+) to (\w+) = (\d+)")
 
     dist = defaultdict(dict)
 
-    consume(map(unpack, text.strip().split("\n")))
+    for line in text.strip().split("\n"):
+        a, b, d = r.match(line).groups()
+        dist[a][b] = dist[b][a] = int(d)
 
     return map(distance, permutations(dist))
 

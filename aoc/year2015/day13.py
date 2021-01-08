@@ -10,7 +10,6 @@ from itertools import permutations
 import re
 
 from iteration_utilities import successive
-from more_itertools import consume
 
 from data.utils import get_input
 
@@ -23,14 +22,12 @@ class Family:
     def __init__(self, raw):
         self.pairs = defaultdict(int)
 
-        consume(map(self.process, raw.strip().split("\n")))
+        for line in raw.strip().split("\n"):
+            a, sign, value, b = Family.__r.match(line).groups()
+            mult = 1 if sign == "gain" else -1
+            self.pairs[frozenset((a, b))] += mult * int(value)
 
         self.individuals = {x for xy in self.pairs for x in xy}
-
-    def process(self, line):
-        a, sign, value, b = Family.__r.match(line).groups()
-        mult = 1 if sign == "gain" else -1
-        self.pairs[frozenset((a, b))] += mult * int(value)
 
     def happiness(self, order):
         res = sum(self.pairs.get(frozenset(ab), 0) for ab in successive(order))

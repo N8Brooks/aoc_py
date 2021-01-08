@@ -8,8 +8,6 @@ https://adventofcode.com/2015/day/19
 from collections import defaultdict, deque
 import re
 
-from iteration_utilities import consume
-
 from data.utils import get_input
 
 
