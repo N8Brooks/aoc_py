@@ -30,7 +30,7 @@ def unite(text):
 def part1(text, group="0"):
     parent, find = unite(text)
 
-    return count_items(map(find, parent.values()), partial(eq, find(group)))
+    return count_items(map(find, parent.values()), find(group), True)
 
 
 def part2(text):
