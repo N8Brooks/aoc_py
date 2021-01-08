@@ -15,9 +15,6 @@ from more_itertools import consume
 from data.utils import get_input
 
 
-# TODO: replace double dict data structure with matrix
-
-
 def process(text):
     def distance(path):
         return sum(dist[a][b] for a, b in successive(path))
