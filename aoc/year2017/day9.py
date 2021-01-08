@@ -18,9 +18,7 @@ def part1(text):
     length = len(text)
 
     while i < length:
-        if (char := text[i]) == "!":
-            i += 1
-        elif char == "<":
+        if (char := text[i]) == "<":
             i = garbage(i + 1)
         elif char == "{":
             depth += 1
@@ -33,26 +31,21 @@ def part1(text):
 
 
 def part2(text):
-    def garbage(i):
-        nonlocal count
-        while (char := text[i]) != ">":
-            if char == "!":
-                i += 1
-            else:
-                count += 1
-            i += 1
-        return i
-
     count = i = 0
     length = len(text)
 
     while i < length:
-        if (char := text[i]) == "!":
+        if text[i] != "<":
             i += 1
-        elif char == "<":
-            i = garbage(i + 1)
-        elif char == "{" or char == "}":
-            pass
+            continue
+
+        i += 1
+        while (char := text[i]) != ">":
+            if char == "!":
+                i += 2
+            else:
+                count += 1
+                i += 1
         i += 1
 
     return count
