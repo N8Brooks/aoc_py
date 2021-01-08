@@ -10,13 +10,15 @@ from aoc.year2017.day13 import part1, part2
 from data.utils import get_input
 
 
-EXAMPLE = """0: 3
+EXAMPLE = """
+0: 3
 1: 2
 4: 4
 6: 4
 """
 
-MOCK = """1: 2
+MOCK = """
+1: 2
 4: 4
 7: 4
 """

@@ -11,11 +11,13 @@ from data.utils import get_input
 
 
 EXAMPLE = """
+
 Butterscotch: capacity -1, durability -2, flavor 6, texture 3, calories 8
 Cinnamon: capacity 2, durability 3, flavor -2, texture -1, calories 3
 """
 
 MOCK = """
+
 Sugar: capacity 2, durability 1, flavor 5, texture 1, calories 4
 Capsaicin: capacity 1, durability 5, flavor -5, texture 3, calories 1
 Butter: capacity 1, durability 3, flavor 3, texture 3, calories 9

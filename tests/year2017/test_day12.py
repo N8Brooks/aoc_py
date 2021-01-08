@@ -10,7 +10,8 @@ from aoc.year2017.day12 import part1, part2
 from data.utils import get_input
 
 
-EXAMPLE = """0 <-> 2
+EXAMPLE = """
+0 <-> 2
 1 <-> 1
 2 <-> 0, 3, 4
 3 <-> 2, 4

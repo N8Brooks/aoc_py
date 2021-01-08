@@ -14,31 +14,31 @@ class TestPart1(TestCase):
     def test_input(self):
         self.assertEqual(part1(get_input(2015, 1)), 232)
 
-    def test_example_1a(self):
+    def test_example_1(self):
         self.assertEqual(part1("(())"), 0)
 
-    def test_example_1b(self):
+    def test_example_2(self):
         self.assertEqual(part1("()()"), 0)
 
-    def test_example_2a(self):
+    def test_example_3(self):
         self.assertEqual(part1("((("), 3)
 
-    def test_example_2b(self):
+    def test_example_4(self):
         self.assertEqual(part1("(()(()("), 3)
 
-    def test_example_2c(self):
+    def test_example_5(self):
         self.assertEqual(part1("))((((("), 3)
 
-    def test_example_3a(self):
+    def test_example_6(self):
         self.assertEqual(part1("())"), -1)
 
-    def test_example_3b(self):
+    def test_example_7(self):
         self.assertEqual(part1("))("), -1)
 
-    def test_example_4a(self):
+    def test_example_8(self):
         self.assertEqual(part1(")))"), -3)
 
-    def test_example_4b(self):
+    def test_example_9(self):
         self.assertEqual(part1(")())())"), -3)
 
 

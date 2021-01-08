@@ -10,7 +10,8 @@ from aoc.year2016.day8 import part1, part2
 from data.utils import get_input
 
 
-EXAMPLE = """rect 3x2
+EXAMPLE = """
+rect 3x2
 rotate column x=1 by 1
 rotate row y=0 by 4
 rotate column x=1 by 1
