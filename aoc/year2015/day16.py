@@ -46,9 +46,9 @@ def part1(text):
 def part2(text):
     def valid_prop(record):
         key, value = record.split(": ")
-        if key in ["cats", "trees"]:
+        if key == "cats" or key == "trees":
             return TARGET[key] < value
-        elif key in ["pomeranians", "goldfish"]:
+        elif key == "pomeranians" or key == "goldfish":
             return value < TARGET[key]
 
         return TARGET[key] == value
