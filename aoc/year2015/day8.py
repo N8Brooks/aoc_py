@@ -5,8 +5,6 @@ https://adventofcode.com/2015/day/8
 """
 
 
-import re
-
 from data.utils import get_input
 
 

@@ -8,7 +8,12 @@ https://adventofcode.com/2015/day/11
 from itertools import accumulate, starmap, repeat
 from operator import eq
 
-from iteration_utilities import count_items, starfilter, successive, unique_everseen
+from iteration_utilities import (
+    count_items,
+    starfilter,
+    successive,
+    unique_everseen,
+)
 
 from data.utils import get_input
 
@@ -39,9 +44,9 @@ def part1(text):
         if not any(starmap(straight, successive(string, 3))):
             return False
 
-        pairs = count_items(unique_everseen(starfilter(eq, successive(string))))
+        pairs = unique_everseen(starfilter(eq, successive(string)))
 
-        return 1 < pairs
+        return 1 < count_items(pairs)
 
     n = len(processed := text.strip())
 

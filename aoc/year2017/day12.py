@@ -5,9 +5,7 @@ https://adventofcode.com/2017/day/12
 """
 
 
-from functools import partial
 from itertools import repeat
-from operator import eq
 
 from iteration_utilities import count_items
 

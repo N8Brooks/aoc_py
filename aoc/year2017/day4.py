@@ -5,8 +5,6 @@ https://adventofcode.com/2017/day/4
 """
 
 
-from itertools import combinations
-
 from iteration_utilities import all_distinct
 
 from data.utils import get_input

@@ -6,7 +6,6 @@ https://adventofcode.com/2015/day/7
 
 
 from collections import deque
-from itertools import filterfalse
 
 from iteration_utilities import is_None
 

@@ -14,7 +14,7 @@ def part1(text):
         lo, hi, char, password = r.match(line).groups()
         return int(lo) <= password.count(char) <= int(hi)
 
-    r = re.compile("(\d+)-(\d+) (\w): (\w+)")
+    r = re.compile(r"(\d+)-(\d+) (\w): (\w+)")
 
     return sum(map(valid, text.strip().split("\n")))
 
@@ -26,7 +26,7 @@ def part2(text):
         two = char == password[int(hi) - 1]
         return one != two
 
-    r = re.compile("(\d+)-(\d+) (\w): (\w+)")
+    r = re.compile(r"(\d+)-(\d+) (\w): (\w+)")
 
     return sum(map(valid, text.strip().split("\n")))
 

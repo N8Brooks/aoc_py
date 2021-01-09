@@ -15,7 +15,8 @@ from data.utils import get_input
 
 R = re.compile(
     (
-        r"(?:\w+): capacity (-?\d+), durability (-?\d+), flavor (-?\d+), texture (-?\d+), calories (-?\d+)"
+        r"(?:\w+): capacity (-?\d+), durability (-?\d+), "
+        r"flavor (-?\d+), texture (-?\d+), calories (-?\d+)"
     )
 )
 

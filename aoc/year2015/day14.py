@@ -16,7 +16,8 @@ from data.utils import get_input
 
 R = re.compile(
     (
-        r"(?:\w+) can fly (\d+) km/s for (\d+) seconds, but then must rest for (\d+) seconds."
+        r"(?:\w+) can fly (\d+) km/s for (\d+) "
+        r"seconds, but then must rest for (\d+) seconds."
     )
 )
 

@@ -19,7 +19,7 @@ setuptools.setup(
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
     ],
-    python_requires=">=3.9",
+    python_requires=">=3.9.1",
     install_requires=[
         "numpy>=1.19.2",
         "more_itertools>=8.6.0",

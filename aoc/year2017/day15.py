@@ -26,7 +26,7 @@ def count(a_gen, b_gen, sample):
 
 
 def part1(text, a_mult=16807, b_mult=48271, sample=int(4e7)):
-    a_start, b_start = map(int, re.findall("\d+", text))
+    a_start, b_start = map(int, re.findall(r"\d+", text))
 
     a_gen = applyfunc(lambda a: (a_mult * a) % DIVISOR, a_start)
     b_gen = applyfunc(lambda b: (b_mult * b) % DIVISOR, b_start)
@@ -35,7 +35,7 @@ def part1(text, a_mult=16807, b_mult=48271, sample=int(4e7)):
 
 
 def part2(text, a_mult=16807, b_mult=48271, sample=int(5e6)):
-    a_start, b_start = map(int, re.findall("\d+", text))
+    a_start, b_start = map(int, re.findall(r"\d+", text))
 
     a_gen = applyfunc(lambda a: (a_mult * a) % DIVISOR, a_start)
     a_gen = filterfalse(lambda a: a % 4, a_gen)

@@ -40,7 +40,8 @@ def process(text, shape):
 
     r = re.compile(
         (
-            r"(?P<R>rotate|rect) (?:(?P<A>\d+)x(?P<B>\d+))?(?:(?P<V>column x|row y)=(?P<C>\d+) by (?P<D>\d+))?"
+            r"(?P<R>rotate|rect) (?:(?P<A>\d+)x(?P<B>\d+))"
+            r"?(?:(?P<V>column x|row y)=(?P<C>\d+) by (?P<D>\d+))?"
         )
     )
 

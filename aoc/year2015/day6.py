@@ -8,8 +8,6 @@ https://adventofcode.com/2015/day/6
 import numpy as np
 import re
 
-from iteration_utilities import last
-
 from data.utils import get_input
 
 
