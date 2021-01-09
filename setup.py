@@ -25,5 +25,6 @@ setuptools.setup(
         "more_itertools>=8.6.0",
         "iteration_utilities>=0.11.0",
         "scipy>=1.5.2",
+        "requests>=2.25.1",
     ],
 )
