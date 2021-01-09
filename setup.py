@@ -24,5 +24,6 @@ setuptools.setup(
         "numpy>=1.19.2",
         "more_itertools>=8.6.0",
         "iteration_utilities>=0.11.0",
+        "scipy>=1.5.2",
     ],
 )
