@@ -60,6 +60,7 @@ def part2(text, shape=(6, 50)):
 
     screen = process(text, shape)
     hashes = map(hasher, np.hsplit(screen, screen.shape[1] // 5))
+
     return "".join(map(LETTERS.get, hashes))
 
 
