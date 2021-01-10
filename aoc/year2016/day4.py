@@ -4,6 +4,7 @@
 https://adventofcode.com/2016/day/4
 """
 
+
 from collections import Counter
 from heapq import nsmallest
 from itertools import repeat
