@@ -13,15 +13,15 @@ from data.utils import get_input
 def part1(text):
     def any_yes(group):
         return len(set(chain.from_iterable(group.split())))
-    
-    return sum(map(any_yes, text.split('\n\n')))
+
+    return sum(map(any_yes, text.split("\n\n")))
 
 
 def part2(text):
     def all_yes(group):
         return len(set.intersection(*map(set, group.split())))
-    
-    return sum(map(all_yes, text.split('\n\n')))
+
+    return sum(map(all_yes, text.split("\n\n")))
 
 
 if __name__ == "__main__":  # pragma: no cover
