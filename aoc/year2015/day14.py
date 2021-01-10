@@ -26,7 +26,7 @@ def process(text):
     def stats(line):
         return tuple(map(int, R.match(line).groups()))
 
-    return tuple(map(stats, text.strip().split("\n")))
+    return tuple(map(stats, text.strip().splitlines()))
 
 
 def part1(text, total=2503):

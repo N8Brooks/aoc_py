@@ -22,7 +22,7 @@ R = re.compile(
 
 
 def process(text):
-    processed = [R.match(line).groups() for line in text.strip().split("\n")]
+    processed = [R.match(line).groups() for line in text.strip().splitlines()]
 
     return np.array(processed, int).transpose()
 

@@ -22,7 +22,7 @@ def process(text):
 
     dist = defaultdict(dict)
 
-    for line in text.strip().split("\n"):
+    for line in text.strip().splitlines():
         a, b, d = r.match(line).groups()
         dist[a][b] = dist[b][a] = int(d)
 

@@ -23,11 +23,11 @@ def trees(lines, right, down):
 
 
 def part1(text, right=3, down=1):
-    return trees(text.strip().split("\n"), right, down)
+    return trees(text.strip().splitlines(), right, down)
 
 
 def part2(text, slopes=SLOPES):
-    return prod(starmap(partial(trees, text.strip().split("\n")), slopes))
+    return prod(starmap(partial(trees, text.strip().splitlines()), slopes))
 
 
 if __name__ == "__main__":  # pragma: no cover

@@ -17,7 +17,7 @@ def part1(text):
         frequencies = set(Counter(line).values())
         return complex(2 in frequencies, 3 in frequencies)
 
-    total = sum(map(checksum, text.strip().split("\n")))
+    total = sum(map(checksum, text.strip().splitlines()))
     return int(total.imag * total.real)
 
 

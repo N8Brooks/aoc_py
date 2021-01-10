@@ -20,7 +20,7 @@ def total(iterable):
 
 
 def process(text):
-    return (map(int, tri.split()) for tri in text.strip().split("\n"))
+    return (map(int, tri.split()) for tri in text.strip().splitlines())
 
 
 def part1(text):

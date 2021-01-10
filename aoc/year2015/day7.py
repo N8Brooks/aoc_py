@@ -23,7 +23,7 @@ def process(text):
         operands, dest = line.split(" -> ")
         return tuple(map(cast, operands.split())), dest
 
-    return map(wrap, text.strip().split("\n"))
+    return map(wrap, text.strip().splitlines())
 
 
 def compute(q, request):

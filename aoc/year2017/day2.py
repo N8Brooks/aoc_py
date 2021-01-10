@@ -15,7 +15,7 @@ def part1(text):
         items = tuple(map(int, row.split()))
         return max(items) - min(items)
 
-    return sum(map(diff, text.strip().split("\n")))
+    return sum(map(diff, text.strip().splitlines()))
 
 
 def part2(text):
@@ -23,7 +23,7 @@ def part2(text):
         pairs = combinations(sorted(map(int, row.split())), 2)
         return next(b // a for a, b in pairs if b % a == 0)
 
-    return sum(map(div, text.strip().split("\n")))
+    return sum(map(div, text.strip().splitlines()))
 
 
 if __name__ == "__main__":  # pragma: no cover

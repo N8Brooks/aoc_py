@@ -30,7 +30,7 @@ def find_sue(text, validProp):
 
     r = re.compile(r"Sue (\d+): ")
 
-    sue = next(filter(valid_sue, text.strip().split("\n")))
+    sue = next(filter(valid_sue, text.strip().splitlines()))
 
     return int(r.match(sue).groups()[0])
 

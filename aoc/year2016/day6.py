@@ -12,7 +12,7 @@ from data.utils import get_input
 
 
 def part1(text):
-    return "".join(map(mode, zip(*text.strip().split("\n"))))
+    return "".join(map(mode, zip(*text.strip().splitlines())))
 
 
 def part2(text):
@@ -20,7 +20,7 @@ def part2(text):
         counts = Counter(message)
         return min(counts, key=counts.get)
 
-    return "".join(map(antimode, zip(*text.strip().split("\n"))))
+    return "".join(map(antimode, zip(*text.strip().splitlines())))
 
 
 if __name__ == "__main__":  # pragma: no cover

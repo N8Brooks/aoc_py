@@ -14,14 +14,14 @@ def part1(text):
     def valid(passphrase):
         return all_distinct(passphrase.split())
 
-    return sum(map(valid, text.strip().split("\n")))
+    return sum(map(valid, text.strip().splitlines()))
 
 
 def part2(text):
     def valid(passphrase):
         return all_distinct(map(sorted, passphrase.split()))
 
-    return sum(map(valid, text.strip().split("\n")))
+    return sum(map(valid, text.strip().splitlines()))
 
 
 if __name__ == "__main__":  # pragma: no cover

@@ -14,7 +14,7 @@ from data.utils import get_input
 def process(text, instruction, grid):
     r = re.compile(r"(\D+) (\d+),(\d+) through (\d+),(\d+)")
 
-    for line in text.strip().split("\n"):
+    for line in text.strip().splitlines():
         instruction(*r.match(line).groups())
 
     return int(grid.sum())
