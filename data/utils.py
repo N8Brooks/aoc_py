@@ -31,16 +31,15 @@ def get_cookies():
 
 def get_input(year, day):
     root_path = get_root_path()
-    path = os.path.join(root_path, f"year{year}", f"day{day}.txt")
+    path = os.path.join(root_path, f"year{year}", f"day{day:02}.txt")
 
     if os.path.isfile(path):
         with open(path, "r") as file:
             return file.read()
 
     if get_cookies() is None:
-        raise FileNotFoundError(
-            f"Add session id to aoc/session.txt or paste the input here: {path}"
-        )
+        message = f"missing data/session.txt or data/{year}/{day:02}.txt"
+        raise FileNotFoundError(message)
 
     url = f"https://adventofcode.com/{year}/day/{day}/input"
     text = Session().get(url, **get_cookies()).text
