@@ -10,8 +10,7 @@ from aoc.year2020.day2 import part1, part2
 from data.utils import get_input
 
 
-EXAMPLE = """
-1-3 a: abcde
+EXAMPLE = """1-3 a: abcde
 1-3 b: cdefg
 2-9 c: ccccccccc
 """

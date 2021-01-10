@@ -10,8 +10,7 @@ from aoc.year2016.day6 import part1, part2
 from data.utils import get_input
 
 
-EXAMPLE = """
-eedadn
+EXAMPLE = """eedadn
 drvtee
 eandsr
 raavrd

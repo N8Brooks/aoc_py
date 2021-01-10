@@ -23,11 +23,11 @@ def part1(text):
     def severity(depth, scope):
         return 0 if depth % (scope + scope - 2) else depth * scope
 
-    return sum(starmap(severity, map(process, text.strip().splitlines())))
+    return sum(starmap(severity, map(process, text.splitlines())))
 
 
 def part2(text):
-    quotients, scopes = zip(*map(process, text.strip().splitlines()))
+    quotients, scopes = zip(*map(process, text.splitlines()))
     divisors = tuple(scope + scope - 2 for scope in scopes)
 
     if all(starmap(mod, zip(quotients, divisors))):

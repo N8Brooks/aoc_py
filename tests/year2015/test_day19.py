@@ -10,16 +10,14 @@ from aoc.year2015.day19 import part1, part2
 from data.utils import get_input
 
 
-EXAMPLE_1 = """
-H => HO
+EXAMPLE_1 = """H => HO
 H => OH
 O => HH
 
 HOH
 """
 
-EXAMPLE_2 = """
-e => H
+EXAMPLE_2 = """e => H
 e => O
 H => HO
 H => OH

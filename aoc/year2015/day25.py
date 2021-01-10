@@ -3,7 +3,6 @@
 """
 https://adventofcode.com/2015/day/25
 """
-
 import re
 
 from data.utils import get_input

@@ -10,8 +10,7 @@ from aoc.year2016.day2 import part1, part2
 from data.utils import get_input
 
 
-EXAMPLE = """
-ULL
+EXAMPLE = """ULL
 RRDDD
 LURDL
 UUUUD

@@ -10,8 +10,7 @@ from aoc.year2016.day3 import part1, part2
 from data.utils import get_input
 
 
-EXAMPLE = """
-101 301 501
+EXAMPLE = """101 301 501
 102 302 502
 103 303 503
 201 401 601

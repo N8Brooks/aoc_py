@@ -10,8 +10,7 @@ from aoc.year2020.day4 import part1, part2
 from data.utils import get_input
 
 
-EXAMPLE_1 = """
-ecl:gry pid:860033327 eyr:2020 hcl:#fffffd
+EXAMPLE_1 = """ecl:gry pid:860033327 eyr:2020 hcl:#fffffd
 byr:1937 iyr:2017 cid:147 hgt:183cm
 
 iyr:2013 ecl:amb cid:350 eyr:2023 pid:028048884
@@ -26,8 +25,7 @@ hcl:#cfa07d eyr:2025 pid:166559648
 iyr:2011 ecl:brn hgt:59in
 """
 
-EXAMPLE_2 = """
-eyr:1972 cid:100
+EXAMPLE_2 = """eyr:1972 cid:100
 hcl:#18171d ecl:amb hgt:170 pid:186cm iyr:2018 byr:1926
 
 iyr:2019
@@ -42,8 +40,7 @@ eyr:2038 hcl:74454a iyr:2023
 pid:3556412378 byr:2007
 """
 
-EXAMPLE_3 = """
-pid:087499704 hgt:74in ecl:grn iyr:2012 eyr:2030 byr:1980
+EXAMPLE_3 = """pid:087499704 hgt:74in ecl:grn iyr:2012 eyr:2030 byr:1980
 hcl:#623a2f
 
 eyr:2029 ecl:blu cid:129 byr:1989

@@ -16,7 +16,7 @@ def unite(text):
 
     parent = {}
 
-    for line in text.strip().splitlines():
+    for line in text.splitlines():
         a, bs = line.split(" <-> ")
         parent.update(dict.fromkeys(map(find, bs.split(", ")), find(a)))
 

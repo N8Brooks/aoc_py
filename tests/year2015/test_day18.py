@@ -10,8 +10,7 @@ from aoc.year2015.day18 import part1, part2
 from data.utils import get_input
 
 
-EXAMPLE = """
-.#.#.#
+EXAMPLE = """.#.#.#
 ...##.
 #....#
 ..#...

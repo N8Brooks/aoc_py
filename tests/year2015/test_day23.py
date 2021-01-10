@@ -10,8 +10,7 @@ from aoc.year2015.day23 import part1, part2
 from data.utils import get_input
 
 
-EXAMPLE = """
-inc a
+EXAMPLE = """inc a
 jio a, +2
 tpl a
 inc a

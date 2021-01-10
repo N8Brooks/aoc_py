@@ -47,7 +47,7 @@ def process(text, shape):
 
     screen = np.zeros(shape, bool)
 
-    return reduce(act, text.strip().splitlines(), shape)
+    return reduce(act, text.splitlines(), shape)
 
 
 def part1(text, shape=(6, 50)):

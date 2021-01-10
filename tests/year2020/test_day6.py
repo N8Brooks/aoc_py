@@ -10,14 +10,12 @@ from aoc.year2020.day6 import part1, part2
 from data.utils import get_input
 
 
-EXAMPLE_1 = """
-abcx
+EXAMPLE_1 = """abcx
 abcy
 abcz
 """
 
-EXAMPLE_2 = """
-abc
+EXAMPLE_2 = """abc
 
 a
 b
@@ -34,8 +32,7 @@ a
 b
 """
 
-EXAMPLE_3 = """
-abc
+EXAMPLE_3 = """abc
 
 a
 b

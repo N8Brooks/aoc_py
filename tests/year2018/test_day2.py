@@ -10,8 +10,7 @@ from aoc.year2018.day2 import part1, part2
 from data.utils import get_input
 
 
-EXAMPLE_1 = """
-abcdef
+EXAMPLE_1 = """abcdef
 bababc
 abbcde
 abcccd
@@ -20,8 +19,7 @@ abcdee
 ababab
 """
 
-EXAMPLE_2 = """
-abcde
+EXAMPLE_2 = """abcde
 fghij
 klmno
 pqrst

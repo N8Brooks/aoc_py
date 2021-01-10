@@ -10,8 +10,7 @@ from aoc.year2015.day9 import part1, part2
 from data.utils import get_input
 
 
-EXAMPLE = """
-London to Dublin = 464
+EXAMPLE = """London to Dublin = 464
 London to Belfast = 518
 Dublin to Belfast = 141
 """

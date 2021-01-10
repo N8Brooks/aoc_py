@@ -43,7 +43,7 @@ def compute(text, a, b, target):
         return pointer + 1
 
     registers = {"a": a, "b": b}
-    program = tuple(map(process, text.strip().splitlines()))
+    program = tuple(map(process, text.splitlines()))
 
     consume(takewhile(partial(gt, len(program)), applyfunc(execute, 0)), None)
 

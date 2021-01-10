@@ -10,8 +10,7 @@ from aoc.year2015.day13 import part1, part2
 from data.utils import get_input
 
 
-EXAMPLE = """
-Alice would gain 54 happiness units by sitting next to Bob.
+EXAMPLE = """Alice would gain 54 happiness units by sitting next to Bob.
 Alice would lose 79 happiness units by sitting next to Carol.
 Alice would lose 2 happiness units by sitting next to David.
 Bob would gain 83 happiness units by sitting next to Alice.
@@ -24,9 +23,7 @@ David would gain 46 happiness units by sitting next to Alice.
 David would lose 7 happiness units by sitting next to Bob.
 David would gain 41 happiness units by sitting next to Carol.
 """
-
-MOCK = """
-Jody would loose 200 happiness units by sitting next to Carol.
+MOCK = """Jody would loose 200 happiness units by sitting next to Carol.
 Jody would loose 100 happiness units by sitting next to Irwin.
 Jody would loose 1000 happiness units by sitting next to Aligator.
 Carol would loose 42 happiness units by sitting next to Jody.

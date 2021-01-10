@@ -17,7 +17,7 @@ def part1(text):
 
     r = re.compile(r"(\d+)-(\d+) (\w): (\w+)")
 
-    return sum(map(valid, text.strip().splitlines()))
+    return sum(map(valid, text.splitlines()))
 
 
 def part2(text):
@@ -29,7 +29,7 @@ def part2(text):
 
     r = re.compile(r"(\d+)-(\d+) (\w): (\w+)")
 
-    return sum(map(valid, text.strip().splitlines()))
+    return sum(map(valid, text.splitlines()))
 
 
 if __name__ == "__main__":  # pragma: no cover

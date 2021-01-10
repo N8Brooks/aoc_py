@@ -22,7 +22,7 @@ class Family:
     def __init__(self, raw):
         self.pairs = defaultdict(int)
 
-        for line in raw.strip().splitlines():
+        for line in raw.splitlines():
             a, sign, value, b = Family.__r.match(line).groups()
             mult = 1 if sign == "gain" else -1
             self.pairs[frozenset((a, b))] += mult * int(value)

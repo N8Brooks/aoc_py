@@ -46,7 +46,7 @@ def part2(text):
     weights = {}
     graph = {}
 
-    for line in text.strip().splitlines():
+    for line in text.splitlines():
         parent, weight, kids = r.match(line).groups()
         graph[parent] = empty if kids is None else kids.split(", ")
         weights[parent] = int(weight)

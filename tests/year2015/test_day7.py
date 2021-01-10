@@ -10,8 +10,7 @@ from aoc.year2015.day7 import part1, part2
 from data.utils import get_input
 
 
-EXAMPLE = """
-123 -> x
+EXAMPLE = """123 -> x
 456 -> y
 x AND y -> d
 x OR y -> e

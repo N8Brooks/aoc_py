@@ -24,7 +24,7 @@ def part1(text, steps=100):
         neighbors = convolve2d(grid, np.ones((3, 3)), "same") - grid
         return (neighbors == 3) | (grid & (neighbors == 2))
 
-    grid = np.array(tuple(map(process, text.strip().splitlines())))
+    grid = np.array(tuple(map(process, text.splitlines())))
 
     return (nth(steps - 1)(applyfunc(step, grid)) if steps else grid).sum()
 
@@ -34,7 +34,7 @@ def part2(text, steps=100):
         neighbors = convolve2d(grid, np.ones((3, 3)), "same") - grid
         return (neighbors == 3) | (grid & (neighbors == 2)) | on
 
-    grid = np.array(tuple(map(process, text.strip().splitlines())))
+    grid = np.array(tuple(map(process, text.splitlines())))
     on = np.zeros_like(grid)
     on[0, 0] = on[0, -1] = on[-1, 0] = on[-1, -1] = True
     grid |= on
