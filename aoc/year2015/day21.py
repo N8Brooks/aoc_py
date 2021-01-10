@@ -12,7 +12,7 @@ import re
 from data.utils import get_input
 
 
-WEAPONS = ((8, 4, 0), (10, 5, 0), (25, 6, 0), (40, 7, 0), (74, 8, 0))
+WEAPS = ((8, 4, 0), (10, 5, 0), (25, 6, 0), (40, 7, 0), (74, 8, 0))
 
 ARMOR = ((13, 0, 1), (31, 0, 2), (53, 0, 3), (75, 0, 4), (102, 0, 5))
 
@@ -42,7 +42,7 @@ def simulate(text, worst, p_health):
 
     b_health, b_damage, b_armor = map(int, re.findall(r"\d+", text))
 
-    weaps = WEAPONS
+    weaps = WEAPS
     armor = ((0, 0, 0),) + ARMOR
     rings = ((0, 0, 0),) + RINGS + tuple(map(stats, combinations(RINGS, 2)))
 
