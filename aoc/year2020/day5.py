@@ -5,8 +5,6 @@ https://adventofcode.com/2020/day/5
 """
 
 
-import re
-
 from iteration_utilities import minmax
 
 from data.utils import get_input
