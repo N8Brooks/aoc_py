@@ -27,7 +27,7 @@ RINGS = (
 )
 
 
-def simulate(text, worst, p_health):
+def simulate(text, optimal, p_health):
     def turns(a, b):
         return inf if b <= 0 else ceil(a / b)
 
@@ -46,19 +46,20 @@ def simulate(text, worst, p_health):
     armor = ((0, 0, 0),) + ARMOR
     rings = ((0, 0, 0),) + RINGS + tuple(map(stats, combinations(RINGS, 2)))
 
-    equipment = sorted(map(stats, product(weaps, armor, rings)), reverse=worst)
+    equipment = map(stats, product(weaps, armor, rings))
 
-    filter_type = filterfalse if worst else filter
+    if optimal:
+        return min(filter(battle, equipment))[0]
 
-    return next(filter_type(battle, equipment))[0]
+    return max(filterfalse(battle, equipment))[0]
 
 
 def part1(text, p_health=100):
-    return simulate(text, False, p_health)
+    return simulate(text, True, p_health)
 
 
 def part2(text, p_health=100):
-    return simulate(text, True, p_health)
+    return simulate(text, False, p_health)
 
 
 if __name__ == "__main__":  # pragma: no cover
