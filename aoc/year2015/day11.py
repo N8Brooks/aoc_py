@@ -58,7 +58,6 @@ def part1(text):
 
 
 def part2(text):
-    # Call part1 redundantly
     return part1(part1(text))
 
 

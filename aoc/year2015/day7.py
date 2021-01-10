@@ -29,7 +29,7 @@ def process(text):
 def compute(q, request):
     def val(operand):
         if isinstance(operand, str):
-            return _reg.get(operand, None)
+            return reg.get(operand, None)
         else:
             return int(operand)
 
@@ -37,26 +37,26 @@ def compute(q, request):
         if is_None(res := val(exp[0])):
             q.append((exp, dest))
         else:
-            _reg[dest] = res
+            reg[dest] = res
 
     def complement(exp, dest):
         if is_None(res := val(exp[1])):
             q.append((exp, dest))
         else:
-            _reg[dest] = COMP ^ res
+            reg[dest] = COMP ^ res
 
     def instruct(exp, dest):
         if is_None(res1 := val(exp[0])) or is_None(res2 := val(exp[2])):
             q.append((exp, dest))
             return
         if exp[1] == "AND":
-            _reg[dest] = res1 & res2
+            reg[dest] = res1 & res2
         elif exp[1] == "OR":
-            _reg[dest] = res1 | res2
+            reg[dest] = res1 | res2
         elif exp[1] == "LSHIFT":
-            _reg[dest] = res1 << res2
+            reg[dest] = res1 << res2
         elif exp[1] == "RSHIFT":
-            _reg[dest] = res1 >> res2
+            reg[dest] = res1 >> res2
 
     def operate(exp, dest):
         if len(exp) == 1:
@@ -66,12 +66,12 @@ def compute(q, request):
         else:
             instruct(exp, dest)
 
-    _reg = {}
+    reg = {}
 
     while q:
         operate(*q.popleft())
 
-    return _reg.get(request, None)
+    return reg.get(request, None)
 
 
 def part1(text, request="a"):
