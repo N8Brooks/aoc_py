@@ -49,7 +49,7 @@ def part2(text):
             return False
         elif not re.match(r"#[0-9a-f]{6}", hcl):
             return False
-        elif not ecl in ECL:
+        elif ecl not in ECL:
             return False
         elif not len(pid) == 9 or not pid.isdecimal():
             return False
