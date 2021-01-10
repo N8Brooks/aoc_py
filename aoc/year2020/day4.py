@@ -38,7 +38,7 @@ def part2(text):
             return 59 <= int(hgt.removesuffix("in")) <= 76
 
     @starred
-    def valid(byr=0, iyr=0, eyr=0, hgt="", hcl="", ecl="", pid="", **kwargs):
+    def valid(byr=0, iyr=0, eyr=0, hgt="", hcl="", ecl="", pid="", cid=None):
         if not 1920 <= int(byr) <= 2002:
             return False
         elif not 2010 <= int(iyr) <= 2020:
