@@ -5,8 +5,6 @@ https://adventofcode.com/2017/day/12
 """
 
 
-from itertools import repeat
-
 from iteration_utilities import count_items
 
 from data.utils import get_input
@@ -20,7 +18,7 @@ def unite(text):
 
     for line in text.strip().split("\n"):
         a, bs = line.split(" <-> ")
-        parent.update(zip(map(find, bs.split(", ")), repeat(find(a))))
+        parent.update(dict.fromkeys(map(find, bs.split(", ")), find(a)))
 
     return parent, find
 
