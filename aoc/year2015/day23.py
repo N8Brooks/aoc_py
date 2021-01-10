@@ -15,9 +15,6 @@ from data.utils import get_input
 
 
 def compute(text, a, b, target):
-    def value(reg):
-        return registers[reg] if reg.isalpha() else int(reg)
-
     def process(line):
         instruction, *operands = line.replace(",", "").split()
         if instruction == "jmp":
