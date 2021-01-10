@@ -7,7 +7,7 @@ https://adventofcode.com/2016/day/7
 
 from itertools import starmap
 
-from more_itertools import windowed, flatten
+from iteration_utilities import successive, flatten
 
 from data.utils import get_input
 
@@ -27,7 +27,7 @@ def part1(text):
         return a == d and b == c and a != b
 
     def abbas(ip):
-        return any(starmap(abba, windowed(ip, 4)))
+        return any(starmap(abba, successive(ip, 4)))
 
     def tls(hyps, exts):
         return not any(map(abbas, hyps)) and any(map(abbas, exts))
@@ -40,7 +40,7 @@ def part2(text):
         return abc[0] == abc[2] and abc[0] != abc[1]
 
     def abas(ip):
-        return filter(aba, windowed(ip, 3))
+        return filter(aba, successive(ip, 3))
 
     def rev(a, b, _):
         return (b, a, b)
