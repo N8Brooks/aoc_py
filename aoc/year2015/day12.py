@@ -25,16 +25,16 @@ def part1(text):
 
 
 def part2(text):
+    def red(node):
+        return "red" not in node.values() and sum(map(parse, node.values()))
+
     def parse(node):
         if isinstance(node, int):
             return node
         elif isinstance(node, list):
             return sum(map(parse, node))
         elif isinstance(node, dict):
-            if "red" in node.values():
-                return 0
-            else:
-                return sum(map(parse, node.values()))
+            return red(node)
         else:
             return 0
 
