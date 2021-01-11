@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-https://adventofcode.com/2018/day/2
+https://adventofcode.com/2018/day/3
 """
 
 
