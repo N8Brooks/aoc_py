@@ -13,10 +13,7 @@ from data.utils import get_input
 
 
 def total(iterable):
-    def valid(tri):
-        return tri[2] < tri[0] + tri[1]
-
-    return sum(map(valid, map(sorted, iterable)))
+    return sum(tri[2] < tri[0] + tri[1] for tri in map(sorted, iterable))
 
 
 def process(text):
