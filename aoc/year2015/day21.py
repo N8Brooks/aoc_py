@@ -9,6 +9,8 @@ from itertools import combinations, filterfalse, product
 from math import ceil, inf
 import re
 
+from iteration_utilities import packed
+
 from data.utils import get_input
 
 
@@ -31,8 +33,8 @@ def simulate(text, optimal, p_health):
     def turns(a, b):
         return inf if b <= 0 else ceil(a / b)
 
-    def battle(equipment):
-        _, p_damage, p_armor = equipment
+    @packed
+    def battle(_, p_damage, p_armor):
         b_turns = turns(p_health, b_damage - p_armor)
         p_turns = turns(b_health, p_damage - b_armor)
         return p_turns <= b_turns
