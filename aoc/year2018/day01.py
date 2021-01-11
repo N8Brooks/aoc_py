@@ -17,9 +17,7 @@ def part1(text):
 
 
 def part2(text):
-    frequencies = accumulate(cycle(map(int, text.split())), initial=0)
-
-    return next(duplicates(frequencies))
+    return next(duplicates(accumulate(cycle(map(int, text.split())), initial=0)))
 
 
 if __name__ == "__main__":  # pragma: no cover
