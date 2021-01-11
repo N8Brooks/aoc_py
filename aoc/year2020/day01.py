@@ -7,7 +7,6 @@ https://adventofcode.com/2020/day/1
 
 from operator import mul
 
-
 from data.utils import get_input
 
 
