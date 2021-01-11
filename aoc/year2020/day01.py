@@ -16,12 +16,9 @@ def part1(text, total=2020):
             return True
         entries.add(entry)
 
-    def fix(entry):
-        return (total - entry) * entry
-
     entries = set()
 
-    return fix(next(filter(add, map(int, text.split()))))
+    return next((total - x) * x for x in sorted(map(int, text.split())) if add(x))
 
 
 def part2(text, total=2020):
@@ -37,7 +34,7 @@ def part2(text, total=2020):
     ones = set()
     twos = {}
 
-    return fix(next(filter(add, map(int, text.split()))))
+    return next(fix(x) for x in sorted(map(int, text.split())) if add(x))
 
 
 if __name__ == "__main__":  # pragma: no cover
