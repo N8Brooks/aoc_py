@@ -23,9 +23,7 @@ def part1(text):
 def part2(text):
     def valid(line):
         lo, hi, char, password = r.match(line).groups()
-        one = char == password[int(lo) - 1]
-        two = char == password[int(hi) - 1]
-        return one != two
+        return (char == password[int(lo) - 1]) != (char == password[int(hi) - 1])
 
     r = re.compile(r"(\d+)-(\d+) (\w): (\w+)")
 
