@@ -7,13 +7,14 @@ https://adventofcode.com/2017/day/2
 
 from itertools import combinations
 
+from iteration_utilities import minmax, rsub
+
 from data.utils import get_input
 
 
 def part1(text):
     def diff(row):
-        items = tuple(map(int, row.split()))
-        return max(items) - min(items)
+        return rsub(*minmax(map(int, row.split())))
 
     return sum(map(diff, text.splitlines()))
 
