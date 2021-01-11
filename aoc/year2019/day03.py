@@ -9,7 +9,6 @@ from itertools import accumulate, repeat
 from operator import add
 import re
 
-
 from data.utils import get_input
 
 
