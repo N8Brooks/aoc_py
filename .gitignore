@@ -1,4 +1,5 @@
 *.pyc
 .coverage
 .vscode
+aoc.egg-info
 data/session.txt
