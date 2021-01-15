@@ -15,17 +15,11 @@ def process(text):
 
 
 def part1(text):
-    def paper(a, b, c):
-        return 3 * a * b + 2 * (a * c + b * c)
-
-    return sum(starmap(paper, process(text)))
+    return sum(3 * a * b + 2 * (a * c + b * c) for a, b, c in process(text))
 
 
 def part2(text):
-    def ribbon(a, b, c):
-        return a + a + b + b + a * b * c
-
-    return sum(starmap(ribbon, process(text)))
+    return sum(a + a + b + b + a * b * c for a, b, c in process(text))
 
 
 if __name__ == "__main__":  # pragma: no cover
