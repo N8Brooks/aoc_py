@@ -5,8 +5,6 @@ https://adventofcode.com/2015/day/2
 """
 
 
-from itertools import starmap
-
 from data.utils import get_input
 
 
