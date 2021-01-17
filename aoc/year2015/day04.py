@@ -16,7 +16,7 @@ from data.utils import get_input
 POLL = 1024
 
 
-def hasher(start, text, target, step=mp.cpu_count()):
+def hasher(start, text, target, step=mp.cpu_count()):  # pragma: no cover
     global result
 
     def valid(suffix):
