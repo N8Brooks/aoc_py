@@ -13,13 +13,9 @@ from data.utils import get_input
 
 
 def partition(text, k):
-    def valid(nums):
-        return target == sum(nums)
+    target = sum(nums := tuple(map(int, text.split()))) // k
 
-    nums = tuple(map(int, text.split()))
-    target = sum(nums) // k
-
-    return prod(next(filter(valid, powerset(nums))))
+    return prod(next(group for group in powerset(nums) if target == sum(group)))
 
 
 def part1(text, k=3):
