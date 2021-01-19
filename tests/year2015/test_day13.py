@@ -5,7 +5,7 @@ https://adventofcode.com/2015/day/13
 """
 
 
-from unittest import main, skip, TestCase
+from unittest import main, TestCase
 
 from aoc.year2015.day13 import part1, part2
 from data.utils import get_input
@@ -24,6 +24,7 @@ David would gain 46 happiness units by sitting next to Alice.
 David would lose 7 happiness units by sitting next to Bob.
 David would gain 41 happiness units by sitting next to Carol.
 """
+
 MOCK = """Jody would loose 200 happiness units by sitting next to Carol.
 Jody would loose 100 happiness units by sitting next to Irwin.
 Jody would loose 1000 happiness units by sitting next to Aligator.
@@ -40,7 +41,6 @@ Aligator would loose 360 happiness units by sitting next to Irwin.
 
 
 class TestPart1(TestCase):
-    @skip("Takes too long")
     def test_input(self):
         self.assertEqual(part1(get_input(2015, 13)), 709)
 
@@ -52,7 +52,6 @@ class TestPart1(TestCase):
 
 
 class TestPart2(TestCase):
-    @skip("Takes too long")
     def test_input(self):
         self.assertEqual(part2(get_input(2015, 13)), 668)
 

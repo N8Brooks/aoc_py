@@ -6,46 +6,44 @@ https://adventofcode.com/2015/day/13
 
 
 from collections import defaultdict
-from itertools import permutations
+from functools import cache
 import re
-
-from iteration_utilities import successive
 
 from data.utils import get_input
 
 
 class Family:
-    __r = re.compile(
-        r"(\w+) would (\w+) (\d+) happiness units by sitting next to (\w+)."
-    )
+    r = re.compile(r"(\w+) would (\w+) (\d+) happiness units by sitting next to (\w+).")
 
-    def __init__(self, raw):
+    def __init__(self, text, buffer=False):
+        self.individuals = {}
         self.pairs = defaultdict(int)
 
-        for line in raw.splitlines():
-            a, sign, value, b = Family.__r.match(line).groups()
-            mult = 1 if sign == "gain" else -1
-            self.pairs[frozenset((a, b))] += mult * int(value)
+        for line in text.splitlines():
+            a, sign, val, b = Family.r.match(line).groups()
+            a = self.individuals.setdefault(a, len(self.individuals))
+            b = self.individuals.setdefault(b, len(self.individuals))
+            self.pairs[(1 << a) | (1 << b)] += int(val) if sign == "gain" else -int(val)
 
-        self.individuals = {x for xy in self.pairs for x in xy}
+        self.n = len(self.individuals) + buffer
 
-    def happiness(self, order):
-        res = sum(self.pairs.get(frozenset(ab), 0) for ab in successive(order))
-        res += self.pairs.get(frozenset((order[0], order[-1])), 0)
-        return res
+    @cache
+    def happiness(self, i=0, s=1):
+        def add(j):
+            return self.pairs[(1 << i) | (1 << j)] + self.happiness(j, s | (1 << j))
 
-    def __iter__(self):
-        yield from map(self.happiness, permutations(self.individuals))
+        if s == (1 << self.n) - 1:
+            return self.pairs[1 | (1 << i)]
+
+        return max(add(j) for j in range(self.n) if not (s & (1 << j)))
 
 
 def part1(text):
-    return max(Family(text))
+    return Family(text).happiness()
 
 
 def part2(text):
-    family = Family(text)
-    family.individuals.add("Santa's helper")
-    return max(family)
+    return Family(text, True).happiness()
 
 
 if __name__ == "__main__":  # pragma: no cover
