@@ -6,9 +6,9 @@ https://adventofcode.com/2019/day/6
 
 
 from collections import defaultdict
+from functools import partial
 from itertools import takewhile
 from operator import ne
-from functools import partial
 import re
 
 from iteration_utilities import applyfunc
